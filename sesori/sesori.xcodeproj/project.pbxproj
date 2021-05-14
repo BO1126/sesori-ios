@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -13,6 +13,7 @@
 		42916060264BBE470072A2CF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4291605E264BBE470072A2CF /* Main.storyboard */; };
 		42916062264BBE480072A2CF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 42916061264BBE480072A2CF /* Assets.xcassets */; };
 		42916065264BBE480072A2CF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 42916063264BBE480072A2CF /* LaunchScreen.storyboard */; };
+		8619B80121CB1935D322CD20 /* Pods_sesori.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9912C9BAFB20E5A7FBDF82AE /* Pods_sesori.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,9 @@
 		42916061264BBE480072A2CF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		42916064264BBE480072A2CF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		42916066264BBE480072A2CF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9912C9BAFB20E5A7FBDF82AE /* Pods_sesori.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_sesori.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AF0AFAF0D524CD25CFCE4065 /* Pods-sesori.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-sesori.debug.xcconfig"; path = "Target Support Files/Pods-sesori/Pods-sesori.debug.xcconfig"; sourceTree = "<group>"; };
+		C51E7213880FA32F957EC244 /* Pods-sesori.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-sesori.release.xcconfig"; path = "Target Support Files/Pods-sesori/Pods-sesori.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +35,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8619B80121CB1935D322CD20 /* Pods_sesori.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,6 +47,8 @@
 			children = (
 				42916057264BBE470072A2CF /* sesori */,
 				42916056264BBE470072A2CF /* Products */,
+				497FE9F39691541764A61ABC /* Pods */,
+				870C0D01235260E6A5A111F5 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -67,6 +74,23 @@
 			path = sesori;
 			sourceTree = "<group>";
 		};
+		497FE9F39691541764A61ABC /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				AF0AFAF0D524CD25CFCE4065 /* Pods-sesori.debug.xcconfig */,
+				C51E7213880FA32F957EC244 /* Pods-sesori.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		870C0D01235260E6A5A111F5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9912C9BAFB20E5A7FBDF82AE /* Pods_sesori.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -74,9 +98,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 42916069264BBE480072A2CF /* Build configuration list for PBXNativeTarget "sesori" */;
 			buildPhases = (
+				0950E0A5A93BB08160131549 /* [CP] Check Pods Manifest.lock */,
 				42916051264BBE470072A2CF /* Sources */,
 				42916052264BBE470072A2CF /* Frameworks */,
 				42916053264BBE470072A2CF /* Resources */,
+				36AC46D3664DB9E6E5E95165 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -131,6 +157,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0950E0A5A93BB08160131549 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-sesori-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		36AC46D3664DB9E6E5E95165 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-sesori/Pods-sesori-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-sesori/Pods-sesori-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-sesori/Pods-sesori-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		42916051264BBE470072A2CF /* Sources */ = {
@@ -283,6 +351,7 @@
 		};
 		4291606A264BBE480072A2CF /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = AF0AFAF0D524CD25CFCE4065 /* Pods-sesori.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -301,6 +370,7 @@
 		};
 		4291606B264BBE480072A2CF /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C51E7213880FA32F957EC244 /* Pods-sesori.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
