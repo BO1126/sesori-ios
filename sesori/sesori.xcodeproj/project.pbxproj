@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		428CB053265425AD002CAFE9 /* FirstItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 428CB052265425AD002CAFE9 /* FirstItemViewController.swift */; };
+		428CB0552654268E002CAFE9 /* LunchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 428CB0542654268E002CAFE9 /* LunchViewController.swift */; };
 		42916059264BBE470072A2CF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42916058264BBE470072A2CF /* AppDelegate.swift */; };
 		4291605B264BBE470072A2CF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4291605A264BBE470072A2CF /* SceneDelegate.swift */; };
 		4291605D264BBE470072A2CF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4291605C264BBE470072A2CF /* ViewController.swift */; };
@@ -17,6 +19,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		428CB052265425AD002CAFE9 /* FirstItemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstItemViewController.swift; sourceTree = "<group>"; };
+		428CB0542654268E002CAFE9 /* LunchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LunchViewController.swift; sourceTree = "<group>"; };
 		42916055264BBE470072A2CF /* sesori.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = sesori.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		42916058264BBE470072A2CF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4291605A264BBE470072A2CF /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -70,6 +74,8 @@
 				42916061264BBE480072A2CF /* Assets.xcassets */,
 				42916063264BBE480072A2CF /* LaunchScreen.storyboard */,
 				42916066264BBE480072A2CF /* Info.plist */,
+				428CB052265425AD002CAFE9 /* FirstItemViewController.swift */,
+				428CB0542654268E002CAFE9 /* LunchViewController.swift */,
 			);
 			path = sesori;
 			sourceTree = "<group>";
@@ -206,7 +212,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				4291605D264BBE470072A2CF /* ViewController.swift in Sources */,
+				428CB0552654268E002CAFE9 /* LunchViewController.swift in Sources */,
 				42916059264BBE470072A2CF /* AppDelegate.swift in Sources */,
+				428CB053265425AD002CAFE9 /* FirstItemViewController.swift in Sources */,
 				4291605B264BBE470072A2CF /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -66,12 +66,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hAW-5F-cOl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="916" y="1010"/>
+            <point key="canvasLocation" x="1807" y="1278"/>
         </scene>
         <!--Item 1-->
         <scene sceneID="SAn-Np-zdC">
             <objects>
-                <viewController id="noa-Z6-JxV" sceneMemberID="viewController">
+                <viewController id="noa-Z6-JxV" customClass="FirstItemViewController" customModule="sesori" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8Ni-3l-YUL">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -80,6 +80,9 @@
                                 <rect key="frame" x="60" y="144" width="92" height="36"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="오늘의 급식"/>
+                                <connections>
+                                    <segue destination="1no-PE-Q7O" kind="presentation" id="ieF-gc-XDh"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pKd-So-nXD">
                                 <rect key="frame" x="245" y="144" width="109" height="36"/>
@@ -101,6 +104,36 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PxD-3E-afe" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1808" y="-217"/>
+        </scene>
+        <!--Lunch View Controller-->
+        <scene sceneID="ofj-hY-dQg">
+            <objects>
+                <viewController id="1no-PE-Q7O" customClass="LunchViewController" customModule="sesori" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="2as-Fe-jec">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="오늘의 급식" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SxV-6I-dZq">
+                                <rect key="frame" x="10" y="10" width="78" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="ntv-y8-rGV"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="SxV-6I-dZq" firstAttribute="top" secondItem="ntv-y8-rGV" secondAttribute="top" constant="10" id="eEL-fj-5FQ"/>
+                            <constraint firstItem="SxV-6I-dZq" firstAttribute="leading" secondItem="ntv-y8-rGV" secondAttribute="leading" constant="10" id="k3h-ph-rFo"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="TodayLunchLabel" destination="SxV-6I-dZq" id="H2a-uj-siO"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KBO-OD-J9N" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2642" y="-218"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="h5r-r5-91D">

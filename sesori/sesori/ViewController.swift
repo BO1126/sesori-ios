@@ -9,7 +9,6 @@ import UIKit
 import KakaoSDKCommon
 import KakaoSDKAuth
 import KakaoSDKUser
-import Alamofire
 
 class ViewController: UIViewController {
 
