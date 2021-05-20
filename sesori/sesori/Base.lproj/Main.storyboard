@@ -113,8 +113,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="오늘의 급식" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SxV-6I-dZq">
-                                <rect key="frame" x="10" y="10" width="78" height="20.5"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="급식" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SxV-6I-dZq">
+                                <rect key="frame" x="10" y="10" width="29.5" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -123,8 +123,8 @@
                         <viewLayoutGuide key="safeArea" id="ntv-y8-rGV"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="SxV-6I-dZq" firstAttribute="top" secondItem="ntv-y8-rGV" secondAttribute="top" constant="10" id="eEL-fj-5FQ"/>
-                            <constraint firstItem="SxV-6I-dZq" firstAttribute="leading" secondItem="ntv-y8-rGV" secondAttribute="leading" constant="10" id="k3h-ph-rFo"/>
+                            <constraint firstItem="SxV-6I-dZq" firstAttribute="leading" secondItem="ntv-y8-rGV" secondAttribute="leading" constant="10" id="Lua-Mh-hUn"/>
+                            <constraint firstItem="SxV-6I-dZq" firstAttribute="top" secondItem="ntv-y8-rGV" secondAttribute="top" constant="10" id="eGe-jw-VKJ"/>
                         </constraints>
                     </view>
                     <connections>
@@ -133,7 +133,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KBO-OD-J9N" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2642" y="-218"/>
+            <point key="canvasLocation" x="2640.579710144928" y="-218.30357142857142"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="h5r-r5-91D">
