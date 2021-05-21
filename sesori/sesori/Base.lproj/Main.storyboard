@@ -52,7 +52,22 @@
             </objects>
             <point key="canvasLocation" x="1808" y="390"/>
         </scene>
-        <!--Item 3-->
+        <!--Timetable View Controller-->
+        <scene sceneID="3q4-Vp-uSI">
+            <objects>
+                <viewController id="gbl-Rb-lpV" customClass="TimetableViewController" customModule="sesori" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8GG-QU-iA2">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="enU-aX-3ta"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jP7-lb-A3q" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2808" y="123"/>
+        </scene>
+        <!--마이페이지-->
         <scene sceneID="3R8-Oc-jqP">
             <objects>
                 <viewController id="aC0-Os-hfl" sceneMemberID="viewController">
@@ -62,13 +77,13 @@
                         <viewLayoutGuide key="safeArea" id="A5k-hZ-hNE"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item 3" id="DYW-8q-9FX"/>
+                    <tabBarItem key="tabBarItem" title="마이페이지" id="DYW-8q-9FX"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hAW-5F-cOl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1807" y="1278"/>
         </scene>
-        <!--Item 1-->
+        <!--학교 정보-->
         <scene sceneID="SAn-Np-zdC">
             <objects>
                 <viewController id="noa-Z6-JxV" customClass="FirstItemViewController" customModule="sesori" customModuleProvider="target" sceneMemberID="viewController">
@@ -87,7 +102,10 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pKd-So-nXD">
                                 <rect key="frame" x="245" y="144" width="109" height="36"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <state key="normal" title="우리반 시간표"/>
+                                <state key="normal" title="이번주 시간표"/>
+                                <connections>
+                                    <segue destination="gbl-Rb-lpV" kind="presentation" id="TCP-AH-JCv"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="JCy-U7-bCX"/>
@@ -99,11 +117,11 @@
                             <constraint firstItem="GcJ-AJ-KWw" firstAttribute="leading" secondItem="JCy-U7-bCX" secondAttribute="leading" constant="60" id="mB2-ra-JAm"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item 1" id="WiM-D0-RRP"/>
+                    <tabBarItem key="tabBarItem" title="학교 정보" id="WiM-D0-RRP"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PxD-3E-afe" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1808" y="-217"/>
+            <point key="canvasLocation" x="1807" y="-246"/>
         </scene>
         <!--Lunch View Controller-->
         <scene sceneID="ofj-hY-dQg">
@@ -115,12 +133,13 @@
                         <subviews>
                             <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" style="inline" translatesAutoresizingMaskIntoConstraints="NO" id="KmZ-ao-mEN">
                                 <rect key="frame" x="0.0" y="50" width="414" height="352"/>
+                                <locale key="locale" localeIdentifier="ko_KR"/>
                                 <connections>
                                     <action selector="didLunchDatePickerValueChanged" destination="1no-PE-Q7O" eventType="valueChanged" id="3ep-Ti-fcg"/>
                                 </connections>
                             </datePicker>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="급식" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SxV-6I-dZq">
-                                <rect key="frame" x="20" y="412" width="29.5" height="20.5"/>
+                                <rect key="frame" x="30" y="442" width="29.5" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -130,9 +149,9 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="KmZ-ao-mEN" firstAttribute="leading" secondItem="ntv-y8-rGV" secondAttribute="leading" id="QLt-wI-PrH"/>
-                            <constraint firstItem="SxV-6I-dZq" firstAttribute="top" secondItem="KmZ-ao-mEN" secondAttribute="bottom" constant="10" id="Weh-E0-uwZ"/>
+                            <constraint firstItem="SxV-6I-dZq" firstAttribute="top" secondItem="KmZ-ao-mEN" secondAttribute="bottom" constant="40" id="Weh-E0-uwZ"/>
                             <constraint firstItem="KmZ-ao-mEN" firstAttribute="top" secondItem="ntv-y8-rGV" secondAttribute="top" constant="50" id="ZM1-j6-nHG"/>
-                            <constraint firstItem="SxV-6I-dZq" firstAttribute="leading" secondItem="ntv-y8-rGV" secondAttribute="leading" constant="20" id="eb3-5H-qKp"/>
+                            <constraint firstItem="SxV-6I-dZq" firstAttribute="leading" secondItem="ntv-y8-rGV" secondAttribute="leading" constant="30" id="eb3-5H-qKp"/>
                             <constraint firstItem="KmZ-ao-mEN" firstAttribute="trailing" secondItem="ntv-y8-rGV" secondAttribute="trailing" id="wFz-zr-ziK"/>
                         </constraints>
                     </view>
@@ -143,7 +162,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KBO-OD-J9N" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2640.579710144928" y="-218.30357142857142"/>
+            <point key="canvasLocation" x="2801" y="-508"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="h5r-r5-91D">

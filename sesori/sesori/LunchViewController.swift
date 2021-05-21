@@ -22,10 +22,6 @@ struct Row: Codable {
         case ddishNm = "DDISH_NM"
     }
     
-    init(from decoder: Decoder) throws {
-        let values = try decoder.container(keyedBy: CodingKeys.self)
-        ddishNm = (try? values.decode(String.self, forKey: .ddishNm))!
-    }
     
 }
 
