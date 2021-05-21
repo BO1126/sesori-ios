@@ -113,8 +113,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" style="inline" translatesAutoresizingMaskIntoConstraints="NO" id="KmZ-ao-mEN">
+                                <rect key="frame" x="0.0" y="50" width="414" height="352"/>
+                                <connections>
+                                    <action selector="didLunchDatePickerValueChanged" destination="1no-PE-Q7O" eventType="valueChanged" id="3ep-Ti-fcg"/>
+                                </connections>
+                            </datePicker>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="급식" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SxV-6I-dZq">
-                                <rect key="frame" x="10" y="10" width="29.5" height="20.5"/>
+                                <rect key="frame" x="20" y="412" width="29.5" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -123,12 +129,16 @@
                         <viewLayoutGuide key="safeArea" id="ntv-y8-rGV"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="SxV-6I-dZq" firstAttribute="leading" secondItem="ntv-y8-rGV" secondAttribute="leading" constant="10" id="Lua-Mh-hUn"/>
-                            <constraint firstItem="SxV-6I-dZq" firstAttribute="top" secondItem="ntv-y8-rGV" secondAttribute="top" constant="10" id="eGe-jw-VKJ"/>
+                            <constraint firstItem="KmZ-ao-mEN" firstAttribute="leading" secondItem="ntv-y8-rGV" secondAttribute="leading" id="QLt-wI-PrH"/>
+                            <constraint firstItem="SxV-6I-dZq" firstAttribute="top" secondItem="KmZ-ao-mEN" secondAttribute="bottom" constant="10" id="Weh-E0-uwZ"/>
+                            <constraint firstItem="KmZ-ao-mEN" firstAttribute="top" secondItem="ntv-y8-rGV" secondAttribute="top" constant="50" id="ZM1-j6-nHG"/>
+                            <constraint firstItem="SxV-6I-dZq" firstAttribute="leading" secondItem="ntv-y8-rGV" secondAttribute="leading" constant="20" id="eb3-5H-qKp"/>
+                            <constraint firstItem="KmZ-ao-mEN" firstAttribute="trailing" secondItem="ntv-y8-rGV" secondAttribute="trailing" id="wFz-zr-ziK"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="TodayLunchLabel" destination="SxV-6I-dZq" id="H2a-uj-siO"/>
+                        <outlet property="lunchDatePicker" destination="KmZ-ao-mEN" id="Ocx-r8-eSB"/>
+                        <outlet property="todayLunchLabel" destination="SxV-6I-dZq" id="fRi-74-LfJ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KBO-OD-J9N" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
