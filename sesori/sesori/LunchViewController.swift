@@ -17,7 +17,7 @@ struct MealServiceDietInfo: Codable {
 }
 struct Row: Codable {
     let ddishNm : String
-
+    
     enum CodingKeys: String, CodingKey {
         case ddishNm = "DDISH_NM"
     }
@@ -31,7 +31,11 @@ class LunchViewController : UIViewController {
     @IBOutlet weak var lunchDatePicker : UIDatePicker!
     
     override func viewDidLoad() {
-        getLunchData(pickDate: "20210521")
+        let todayDate = Date()
+        let formatter = DateFormatter()
+        formatter.dateFormat = "yyyyMMdd"
+        let thisday = formatter.string(from: todayDate)
+        getLunchData(pickDate: thisday)
     }
     
     @IBAction func didLunchDatePickerValueChanged(){
@@ -63,7 +67,7 @@ class LunchViewController : UIViewController {
         if arr[0] == "nil" {
             converter = "해당 날짜는 급식이 없습니다!"
         }
-        else if arr[1] != nil{
+        else {
             converter = arr[1]
         }
         self.todayLunchLabel.text = converter
