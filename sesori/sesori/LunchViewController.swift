@@ -8,23 +8,6 @@
 import UIKit
 import Alamofire
 
-struct Lunch: Codable {
-    let mealServiceDietInfo: [MealServiceDietInfo]
-}
-
-struct MealServiceDietInfo: Codable {
-    let row: [Row]?
-}
-struct Row: Codable {
-    let ddishNm : String
-    
-    enum CodingKeys: String, CodingKey {
-        case ddishNm = "DDISH_NM"
-    }
-    
-    
-}
-
 class LunchViewController : UIViewController {
     
     @IBOutlet weak var todayLunchLabel : UILabel!
@@ -54,14 +37,14 @@ class LunchViewController : UIViewController {
                     response in
                     let decoder = JSONDecoder()
                     let lunch = try? decoder.decode(Lunch.self, from: response.data!)
-                    let lunchdata = "\(String(describing: lunch))"
-                    self.convertLunchText(todaylunch: lunchdata)
+                    let lunchData = "\(String(describing: lunch))"
+                    self.convertLunchText(todayLunch: lunchData)
                    }
     }
     
     
-    func convertLunchText(todaylunch : String){
-        var converter : String = todaylunch
+    func convertLunchText(todayLunch : String){
+        var converter : String = todayLunch
         converter = converter.replacingOccurrences(of: "<br/>", with: "\n")
         let arr = converter.components(separatedBy: "\"")
         if arr[0] == "nil" {
@@ -73,5 +56,21 @@ class LunchViewController : UIViewController {
         self.todayLunchLabel.text = converter
     }
     
-    
+    struct Lunch: Codable {
+        let mealServiceDietInfo: [MealServiceDietInfo]
+    }
+
+    struct MealServiceDietInfo: Codable {
+        let row: [Row]?
+        
+    }
+    struct Row : Codable {
+        let ddishNm : String
+        
+        enum CodingKeys: String, CodingKey {
+            case ddishNm = "DDISH_NM"
+        }
+        
+        
+    }
 }

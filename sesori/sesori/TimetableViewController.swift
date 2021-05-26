@@ -6,6 +6,8 @@
 //
 
 import UIKit
+import Alamofire
+
 
 class TimetableViewController : UIViewController, XMLParserDelegate {
     let todayDate = Date()
@@ -14,6 +16,7 @@ class TimetableViewController : UIViewController, XMLParserDelegate {
     
     override func viewDidLoad() {
         makeThisWeek()
+        getTimetableData()
     }
     
     func makeThisWeek(){
@@ -52,16 +55,54 @@ class TimetableViewController : UIViewController, XMLParserDelegate {
         
     }
     
+    
     func getTimetableData(){
-        let url = "https://open.neis.go.kr/hub/hisTimetable?Type=&pIndex=1&pSize=100&ATPT_OFCDC_SC_CODE=B10&SD_SCHUL_CODE=7010537&KEY=406a6783d8db4d5483fd44abf25d720f&DDDEP_NM=인공지능소프트웨어과&GRADE=3&CLASS_NM=6&TI_FROM_YMD=20210517&TI_TO_YMD=20210521"
-        guard let url = URLComponents(string: url)?.url else {
-            return
+        let url = "https://open.neis.go.kr/hub/hisTimetable?Type=json&pIndex=1&pSize=10&ATPT_OFCDC_SC_CODE=B10&SD_SCHUL_CODE=7010537&KEY=406a6783d8db4d5483fd44abf25d720f&GRADE=3&CLASS_NM=6&ALL_TI_YMD=20210526"
+        AF.request(url,
+                   method: .get).responseJSON{
+                    response in
+                    let decoder = JSONDecoder()
+                    let timetable = try? decoder.decode(Timetable.self, from: response.data!)
+                    let timetableData = "\(String(describing: timetable))"
+                    self.convertTimetableText(timetableData: timetableData)
+                   }
+        
+    }
+    
+    func convertTimetableText(timetableData : String){
+        let converter = timetableData
+        let arr = converter.components(separatedBy: "\"")
+        var i : Int = 0
+        while true {
+            i+=1
+            if i%2==1 {
+                print(arr[i])
+                if (arr.count - 2) <= i {
+                    break
+                }
+            }
+            
         }
-        let parser = XMLParser(contentsOf: url)
-        parser?.delegate = self
-        parser?.parse()
+    }
+    
+    struct Timetable: Codable {
+        let hisTimetable: [HisTimetable]
+    }
+    
+    
+    struct HisTimetable: Codable {
+        let row: [Row]?
+    }
+    
+    
+    struct Row: Codable {
+        let perio: String
+        let itrtCntnt: String
         
-        
+        enum CodingKeys: String, CodingKey {
+            case perio = "PERIO"
+            case itrtCntnt = "ITRT_CNTNT"
+        }
     }
     
 }

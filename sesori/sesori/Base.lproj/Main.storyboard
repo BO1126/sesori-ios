@@ -59,8 +59,47 @@
                     <view key="view" contentMode="scaleToFill" id="8GG-QU-iA2">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="igD-i9-B0b">
+                                <rect key="frame" x="30" y="91" width="354" height="677"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" textLabel="RpJ-Os-dJI" style="IBUITableViewCellStyleDefault" id="mhm-Rx-WWv">
+                                        <rect key="frame" x="0.0" y="24.5" width="354" height="43.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="mhm-Rx-WWv" id="EF6-Jn-yfm">
+                                            <rect key="frame" x="0.0" y="0.0" width="354" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="RpJ-Os-dJI">
+                                                    <rect key="frame" x="20" y="0.0" width="314" height="43.5"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="0.0"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="이번주 시간표" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tt6-4I-bvu">
+                                <rect key="frame" x="30" y="50" width="93" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="enU-aX-3ta"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Tt6-4I-bvu" firstAttribute="top" secondItem="enU-aX-3ta" secondAttribute="top" constant="50" id="A87-MC-n1G"/>
+                            <constraint firstItem="igD-i9-B0b" firstAttribute="leading" secondItem="enU-aX-3ta" secondAttribute="leading" constant="30" id="La9-4D-eo6"/>
+                            <constraint firstItem="igD-i9-B0b" firstAttribute="top" secondItem="Tt6-4I-bvu" secondAttribute="bottom" constant="20" id="buR-DB-RRv"/>
+                            <constraint firstItem="enU-aX-3ta" firstAttribute="trailing" secondItem="igD-i9-B0b" secondAttribute="trailing" constant="30" id="jCW-vt-HIG"/>
+                            <constraint firstItem="Tt6-4I-bvu" firstAttribute="leading" secondItem="enU-aX-3ta" secondAttribute="leading" constant="30" id="o2K-xc-Jf5"/>
+                            <constraint firstItem="enU-aX-3ta" firstAttribute="bottom" secondItem="igD-i9-B0b" secondAttribute="bottom" constant="40" id="toO-fD-3SB"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jP7-lb-A3q" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
