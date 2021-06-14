@@ -8,12 +8,15 @@
 import UIKit
 import Alamofire
 
-
-class TimetableViewController : UIViewController{
+class TimetableViewController : UIViewController, UICollectionViewDataSource {
+    
     let todayDate = Date()
     let formatter = DateFormatter()
     let userData = ["Grade":"3","Class":"6","Number":"20"]
     
+    var timelist = ["* 프로그래밍 언어 활용", "* 프로그래밍 언어 활용", "* 머신러닝 기반 데이터 분석", "* 머신러닝 기반 데이터 분석", "* 스마트문화앱 구현", "* 스마트문화앱 구현", "* 스마트문화앱 구현", "성공적인 직업생활", "* 머신러닝 기반 데이터 분석", "* 스마트문화앱 구현", "* 스마트문화앱 구현", "* 빅데이터 수집", "* 빅데이터 수집", "* 빅데이터 수집", "진로활동", "* 프로그래밍 언어 활용", "* 머신러닝 기반 데이터 분석", "* 머신러닝 기반 데이터 분석", "* 프로그래밍 언어 활용", "* 프로그래밍 언어 활용", "운동과 건강", "* 빅데이터 수집", "* 빅데이터 수집", "* 프로그래밍 언어 활용", "* 프로그래밍 언어 활용", "* 머신러닝 기반 데이터 분석", "* 머신러닝 기반 데이터 분석", "성공적인 직업생활", "자율활동", "* 빅데이터 수집", "* 스마트문화앱 구현", "* 스마트문화앱 구현", "자율활동", "자율활동"]
+    
+    @IBOutlet weak var collectionview : UICollectionView!
     
     override func viewDidLoad() {
         makeThisWeek()
@@ -60,18 +63,19 @@ class TimetableViewController : UIViewController{
     
     func getTimetableData(){
         let url = "https://open.neis.go.kr/hub/hisTimetable?Type=json&pIndex=1&pSize=100&ATPT_OFCDC_SC_CODE=B10&SD_SCHUL_CODE=7010537&KEY=406a6783d8db4d5483fd44abf25d720f&GRADE=3&CLASS_NM=6&TI_FROM_YMD=20210524&TI_TO_YMD=20210528"
+        
         AF.request(url,
                    method: .get).responseJSON{
                     response in
                     let decoder = JSONDecoder()
                     let timetable = try? decoder.decode(Timetable.self, from: response.data!)
                     let timetableData = "\(String(describing: timetable))"
-                    self.convertTimetableText(timetableData: timetableData)
+                    self.timelist = self.convertTimetableText(timetableData: timetableData)
                    }
         
     }
     
-    func convertTimetableText(timetableData : String){
+    func convertTimetableText(timetableData : String) -> Array<String>{
         var timetableList : Array<String> = Array<String>()
         var li : Array<String> = Array<String>()
         
@@ -99,10 +103,20 @@ class TimetableViewController : UIViewController{
                 }
             }
         }
-        
+        return li
     }
     
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return timelist.count
+    }
     
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as! TimeCollectionViewCell
+        
+        cell.timeLabel.text = timelist[indexPath.row]
+        
+        return cell
+    }
     
     
     // MARK: - decode
