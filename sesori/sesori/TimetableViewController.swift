@@ -8,19 +8,21 @@
 import UIKit
 import Alamofire
 
-class TimetableViewController : UIViewController, UICollectionViewDataSource {
+class TimetableViewController : UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
     
     let todayDate = Date()
     let formatter = DateFormatter()
     let userData = ["Grade":"3","Class":"6","Number":"20"]
     
-    var timelist = ["* 프로그래밍 언어 활용", "* 프로그래밍 언어 활용", "* 머신러닝 기반 데이터 분석", "* 머신러닝 기반 데이터 분석", "* 스마트문화앱 구현", "* 스마트문화앱 구현", "* 스마트문화앱 구현", "성공적인 직업생활", "* 머신러닝 기반 데이터 분석", "* 스마트문화앱 구현", "* 스마트문화앱 구현", "* 빅데이터 수집", "* 빅데이터 수집", "* 빅데이터 수집", "진로활동", "* 프로그래밍 언어 활용", "* 머신러닝 기반 데이터 분석", "* 머신러닝 기반 데이터 분석", "* 프로그래밍 언어 활용", "* 프로그래밍 언어 활용", "운동과 건강", "* 빅데이터 수집", "* 빅데이터 수집", "* 프로그래밍 언어 활용", "* 프로그래밍 언어 활용", "* 머신러닝 기반 데이터 분석", "* 머신러닝 기반 데이터 분석", "성공적인 직업생활", "자율활동", "* 빅데이터 수집", "* 스마트문화앱 구현", "* 스마트문화앱 구현", "자율활동", "자율활동"]
+    var timelist = [String]()
     
     @IBOutlet weak var collectionview : UICollectionView!
     
     override func viewDidLoad() {
         makeThisWeek()
         getTimetableData()
+        self.collectionview.delegate = self
+        self.collectionview.dataSource = self
     }
     
     
@@ -69,8 +71,25 @@ class TimetableViewController : UIViewController, UICollectionViewDataSource {
                     response in
                     let decoder = JSONDecoder()
                     let timetable = try? decoder.decode(Timetable.self, from: response.data!)
+                    
                     let timetableData = "\(String(describing: timetable))"
-                    self.timelist = self.convertTimetableText(timetableData: timetableData)
+                    let arr = timetableData.components(separatedBy: "\"")
+                    
+                    var i = 0
+                    var timetableList = Array<String>()
+                    
+                    while true {
+                        i+=1
+                        if i%2==1 {
+                            timetableList.append(arr[i])
+                            if (arr.count - 2) <= i {
+                                break
+                            }
+                        }
+                    }
+                    
+                    self.timelist = timetableList
+                    print(self.timelist)
                    }
         
     }
@@ -114,6 +133,9 @@ class TimetableViewController : UIViewController, UICollectionViewDataSource {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as! TimeCollectionViewCell
         
         cell.timeLabel.text = timelist[indexPath.row]
+        
+        cell.layer.borderWidth = 1
+        cell.layer.borderColor = UIColor.lightGray.cgColor
         
         return cell
     }
