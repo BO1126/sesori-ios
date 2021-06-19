@@ -26,43 +26,6 @@ class TimetableViewController : UIViewController, UICollectionViewDataSource, UI
     }
     
     
-    func makeThisWeek(){
-        formatter.dateFormat = "E"
-        formatter.locale = Locale(identifier: "ko-KR")
-        let thisday = formatter.string(from: todayDate)
-        exonerationThisWeekMondayAndFriday(thisday: thisday)
-        print(thisday)
-    }
-    
-    func exonerationThisWeekMondayAndFriday(thisday : String){
-        let thisdaies = ["월","화","수","목","금","토","일"]
-        
-        let todayIndex = Int(thisdaies.firstIndex(of: thisday) ?? 0)
-        let Monday = Calendar.current.date(byAdding: .day,value: -todayIndex, to: todayDate)
-        formatter.dateFormat = "yyyyMMdd"
-        let mondayDate = formatter.string(from: Monday!)
-        
-        print(mondayDate)
-        
-        if todayIndex <= 4{
-            let timeDifference = 4 - todayIndex
-            let Friday = Calendar.current.date(byAdding: .day, value: timeDifference, to: todayDate)
-            formatter.dateFormat = "yyyyMMdd"
-            let fridayDate = formatter.string(from: Friday!)
-            
-            print(fridayDate)
-        }else{
-            let timeDifference = todayIndex - 4
-            let Friday = Calendar.current.date(byAdding: .day, value: -timeDifference, to: todayDate)
-            formatter.dateFormat = "yyyyMMdd"
-            let fridayDate = formatter.string(from: Friday!)
-            
-            print(fridayDate)
-        }
-        
-    }
-    
-    
     func getTimetableData(){
         let url = "https://open.neis.go.kr/hub/hisTimetable?Type=json&pIndex=1&pSize=100&ATPT_OFCDC_SC_CODE=B10&SD_SCHUL_CODE=7010537&KEY=406a6783d8db4d5483fd44abf25d720f&GRADE=3&CLASS_NM=6&TI_FROM_YMD=20210524&TI_TO_YMD=20210528"
         
@@ -73,30 +36,14 @@ class TimetableViewController : UIViewController, UICollectionViewDataSource, UI
                     let timetable = try? decoder.decode(Timetable.self, from: response.data!)
                     
                     let timetableData = "\(String(describing: timetable))"
-                    let arr = timetableData.components(separatedBy: "\"")
-                    
-                    var i = 0
-                    var timetableList = Array<String>()
-                    
-                    while true {
-                        i+=1
-                        if i%2==1 {
-                            timetableList.append(arr[i])
-                            if (arr.count - 2) <= i {
-                                break
-                            }
-                        }
-                    }
-                    
-                    self.timelist = timetableList
-                    print(self.timelist)
-                   }
-        
+                    self.timelist = self.convertTimetableText(timetableData: timetableData)
+                    self.collectionview.reloadData()
+            }
     }
     
     func convertTimetableText(timetableData : String) -> Array<String>{
-        var timetableList : Array<String> = Array<String>()
-        var li : Array<String> = Array<String>()
+        var timetableList = Array<String>()
+        var li = Array<String>()
         
         let converter = timetableData
         let arr = converter.components(separatedBy: "\"")
@@ -140,6 +87,41 @@ class TimetableViewController : UIViewController, UICollectionViewDataSource, UI
         return cell
     }
     
+    func makeThisWeek(){
+        formatter.dateFormat = "E"
+        formatter.locale = Locale(identifier: "ko-KR")
+        let thisday = formatter.string(from: todayDate)
+        exonerationThisWeekMondayAndFriday(thisday: thisday)
+        print(thisday)
+    }
+    
+    func exonerationThisWeekMondayAndFriday(thisday : String){
+        let thisdaies = ["월","화","수","목","금","토","일"]
+        
+        let todayIndex = Int(thisdaies.firstIndex(of: thisday) ?? 0)
+        let Monday = Calendar.current.date(byAdding: .day,value: -todayIndex, to: todayDate)
+        formatter.dateFormat = "yyyyMMdd"
+        let mondayDate = formatter.string(from: Monday!)
+        
+        print(mondayDate)
+        
+        if todayIndex <= 4{
+            let timeDifference = 4 - todayIndex
+            let Friday = Calendar.current.date(byAdding: .day, value: timeDifference, to: todayDate)
+            formatter.dateFormat = "yyyyMMdd"
+            let fridayDate = formatter.string(from: Friday!)
+            
+            print(fridayDate)
+        }else{
+            let timeDifference = todayIndex - 4
+            let Friday = Calendar.current.date(byAdding: .day, value: -timeDifference, to: todayDate)
+            formatter.dateFormat = "yyyyMMdd"
+            let fridayDate = formatter.string(from: Friday!)
+            
+            print(fridayDate)
+        }
+        
+    }
     
     // MARK: - decode
     struct Timetable: Codable {
