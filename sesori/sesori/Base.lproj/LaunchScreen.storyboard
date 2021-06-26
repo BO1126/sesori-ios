@@ -4,7 +4,6 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -16,17 +15,30 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="5_PNG" translatesAutoresizingMaskIntoConstraints="NO" id="qb9-Fg-xSg">
-                                <rect key="frame" x="90" y="-751" width="234" height="2398"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="세소리" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bpv-JP-LTy">
+                                <rect key="frame" x="155" y="473" width="104" height="48"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="40"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Semyeong Computer High School" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c0M-x5-Hgw">
+                                <rect key="frame" x="78" y="541" width="258" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="세소리" translatesAutoresizingMaskIntoConstraints="NO" id="DMa-OK-0D7">
+                                <rect key="frame" x="63" y="250" width="288" height="188"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" red="0.33725490200000002" green="0.70196078429999997" blue="0.83529411760000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="qb9-Fg-xSg" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="9wZ-v1-Y90"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="qb9-Fg-xSg" secondAttribute="trailing" constant="90" id="Gxo-bY-wHw"/>
-                            <constraint firstItem="qb9-Fg-xSg" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="JBA-eb-cvv"/>
-                            <constraint firstItem="qb9-Fg-xSg" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="90" id="kvG-ml-RCp"/>
+                            <constraint firstItem="c0M-x5-Hgw" firstAttribute="top" secondItem="Bpv-JP-LTy" secondAttribute="bottom" constant="20" id="4QD-ea-UgO"/>
+                            <constraint firstItem="c0M-x5-Hgw" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="Ns3-Pi-XzU"/>
+                            <constraint firstItem="Bpv-JP-LTy" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="Y78-4R-h1b"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="c0M-x5-Hgw" secondAttribute="bottom" constant="300" id="cup-Jf-3uA"/>
                         </constraints>
                     </view>
                 </viewController>
@@ -36,9 +48,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="5_PNG" width="2398" height="2398"/>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
+        <image name="세소리" width="472" height="472"/>
     </resources>
 </document>

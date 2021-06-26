@@ -15,19 +15,39 @@ class TimetableViewController : UIViewController, UICollectionViewDataSource, UI
     let userData = ["Grade":"3","Class":"6","Number":"20"]
     
     var timelist = [String]()
+    var thisMondayDate = String()
+    var thisFridayDate = String()
     
     @IBOutlet weak var collectionview : UICollectionView!
     
     override func viewDidLoad() {
+        let flowlayout : UICollectionViewFlowLayout = UICollectionViewFlowLayout()
+        
+        flowlayout.scrollDirection = .horizontal
+        flowlayout.sectionInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
+        
+        flowlayout.minimumInteritemSpacing = 0
+        flowlayout.minimumLineSpacing = 0
+        
+        let cellWidthSize = collectionview.bounds.size.width / 5.4
+        let cellHeightSize = collectionview.bounds.size.height / 8
+        
+        flowlayout.itemSize = CGSize(width: cellWidthSize, height: cellHeightSize)
+        
+        self.collectionview.collectionViewLayout = flowlayout
+        
+        
         makeThisWeek()
         getTimetableData()
         self.collectionview.delegate = self
         self.collectionview.dataSource = self
+        
+        
     }
     
     
     func getTimetableData(){
-        let url = "https://open.neis.go.kr/hub/hisTimetable?Type=json&pIndex=1&pSize=100&ATPT_OFCDC_SC_CODE=B10&SD_SCHUL_CODE=7010537&KEY=406a6783d8db4d5483fd44abf25d720f&GRADE=3&CLASS_NM=6&TI_FROM_YMD=20210524&TI_TO_YMD=20210528"
+        let url = "https://open.neis.go.kr/hub/hisTimetable?Type=json&pIndex=1&pSize=100&ATPT_OFCDC_SC_CODE=B10&SD_SCHUL_CODE=7010537&KEY=406a6783d8db4d5483fd44abf25d720f&GRADE=3&CLASS_NM=6&TI_FROM_YMD="+self.thisMondayDate+"&TI_TO_YMD="+self.thisFridayDate
         
         AF.request(url,
                    method: .get).responseJSON{
@@ -63,14 +83,18 @@ class TimetableViewController : UIViewController, UICollectionViewDataSource, UI
         while true {
             j+=1
             if j%2==1 {
+                timetableList[j] = timetableList[j].replacingOccurrences(of: "* ", with: "")
                 li.append(timetableList[j])
                 if (timetableList.count-1) <= j {
                     break
                 }
             }
         }
+        
         return li
     }
+    
+    
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return timelist.count
@@ -103,22 +127,24 @@ class TimetableViewController : UIViewController, UICollectionViewDataSource, UI
         formatter.dateFormat = "yyyyMMdd"
         let mondayDate = formatter.string(from: Monday!)
         
-        print(mondayDate)
+        var fridayDate = String()
+        
+        self.thisMondayDate = mondayDate
         
         if todayIndex <= 4{
             let timeDifference = 4 - todayIndex
             let Friday = Calendar.current.date(byAdding: .day, value: timeDifference, to: todayDate)
             formatter.dateFormat = "yyyyMMdd"
-            let fridayDate = formatter.string(from: Friday!)
+            fridayDate = formatter.string(from: Friday!)
             
-            print(fridayDate)
+            self.thisFridayDate = fridayDate
         }else{
             let timeDifference = todayIndex - 4
-            let Friday = Calendar.current.date(byAdding: .day, value: -timeDifference, to: todayDate)
+            let friday = Calendar.current.date(byAdding: .day, value: -timeDifference, to: todayDate)
             formatter.dateFormat = "yyyyMMdd"
-            let fridayDate = formatter.string(from: Friday!)
+            fridayDate = formatter.string(from: friday!)
             
-            print(fridayDate)
+            self.thisFridayDate = fridayDate
         }
         
     }

@@ -10,6 +10,8 @@
 		426C3E8426577CC100672FF6 /* TimetableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 426C3E8326577CC100672FF6 /* TimetableViewController.swift */; };
 		4275276A2676E01C008A37E1 /* TimeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 427527692676E01C008A37E1 /* TimeCollectionViewCell.swift */; };
 		42763C36265F559C000CC746 /* ContainerTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42763C35265F559C000CC746 /* ContainerTableViewController.swift */; };
+		42805503268014EC00693A54 /* BoardCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42805502268014EC00693A54 /* BoardCollectionViewCell.swift */; };
+		42805505268015B400693A54 /* BoardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42805504268015B400693A54 /* BoardViewController.swift */; };
 		428CB053265425AD002CAFE9 /* FirstItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 428CB052265425AD002CAFE9 /* FirstItemViewController.swift */; };
 		428CB0552654268E002CAFE9 /* LunchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 428CB0542654268E002CAFE9 /* LunchViewController.swift */; };
 		42916059264BBE470072A2CF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42916058264BBE470072A2CF /* AppDelegate.swift */; };
@@ -25,6 +27,8 @@
 		426C3E8326577CC100672FF6 /* TimetableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimetableViewController.swift; sourceTree = "<group>"; };
 		427527692676E01C008A37E1 /* TimeCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeCollectionViewCell.swift; sourceTree = "<group>"; };
 		42763C35265F559C000CC746 /* ContainerTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContainerTableViewController.swift; sourceTree = "<group>"; };
+		42805502268014EC00693A54 /* BoardCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardCollectionViewCell.swift; sourceTree = "<group>"; };
+		42805504268015B400693A54 /* BoardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardViewController.swift; sourceTree = "<group>"; };
 		428CB052265425AD002CAFE9 /* FirstItemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstItemViewController.swift; sourceTree = "<group>"; };
 		428CB0542654268E002CAFE9 /* LunchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LunchViewController.swift; sourceTree = "<group>"; };
 		42916055264BBE470072A2CF /* sesori.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = sesori.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -85,6 +89,8 @@
 				426C3E8326577CC100672FF6 /* TimetableViewController.swift */,
 				42763C35265F559C000CC746 /* ContainerTableViewController.swift */,
 				427527692676E01C008A37E1 /* TimeCollectionViewCell.swift */,
+				42805502268014EC00693A54 /* BoardCollectionViewCell.swift */,
+				42805504268015B400693A54 /* BoardViewController.swift */,
 			);
 			path = sesori;
 			sourceTree = "<group>";
@@ -222,12 +228,14 @@
 			files = (
 				4291605D264BBE470072A2CF /* ViewController.swift in Sources */,
 				428CB0552654268E002CAFE9 /* LunchViewController.swift in Sources */,
+				42805503268014EC00693A54 /* BoardCollectionViewCell.swift in Sources */,
 				42916059264BBE470072A2CF /* AppDelegate.swift in Sources */,
 				428CB053265425AD002CAFE9 /* FirstItemViewController.swift in Sources */,
 				426C3E8426577CC100672FF6 /* TimetableViewController.swift in Sources */,
 				4275276A2676E01C008A37E1 /* TimeCollectionViewCell.swift in Sources */,
 				4291605B264BBE470072A2CF /* SceneDelegate.swift in Sources */,
 				42763C36265F559C000CC746 /* ContainerTableViewController.swift in Sources */,
+				42805505268015B400693A54 /* BoardViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
