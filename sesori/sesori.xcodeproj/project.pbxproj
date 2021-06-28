@@ -20,6 +20,8 @@
 		42916060264BBE470072A2CF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4291605E264BBE470072A2CF /* Main.storyboard */; };
 		42916062264BBE480072A2CF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 42916061264BBE480072A2CF /* Assets.xcassets */; };
 		42916065264BBE480072A2CF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 42916063264BBE480072A2CF /* LaunchScreen.storyboard */; };
+		42A268E026887D0C009A5BCC /* CustomButtonView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 42A268DF26887D0C009A5BCC /* CustomButtonView.xib */; };
+		42A268E226887D55009A5BCC /* CustomButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42A268E126887D55009A5BCC /* CustomButtonView.swift */; };
 		8619B80121CB1935D322CD20 /* Pods_sesori.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9912C9BAFB20E5A7FBDF82AE /* Pods_sesori.framework */; };
 /* End PBXBuildFile section */
 
@@ -39,6 +41,8 @@
 		42916061264BBE480072A2CF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		42916064264BBE480072A2CF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		42916066264BBE480072A2CF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		42A268DF26887D0C009A5BCC /* CustomButtonView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomButtonView.xib; sourceTree = "<group>"; };
+		42A268E126887D55009A5BCC /* CustomButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButtonView.swift; sourceTree = "<group>"; };
 		9912C9BAFB20E5A7FBDF82AE /* Pods_sesori.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_sesori.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AF0AFAF0D524CD25CFCE4065 /* Pods-sesori.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-sesori.debug.xcconfig"; path = "Target Support Files/Pods-sesori/Pods-sesori.debug.xcconfig"; sourceTree = "<group>"; };
 		C51E7213880FA32F957EC244 /* Pods-sesori.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-sesori.release.xcconfig"; path = "Target Support Files/Pods-sesori/Pods-sesori.release.xcconfig"; sourceTree = "<group>"; };
@@ -91,6 +95,8 @@
 				427527692676E01C008A37E1 /* TimeCollectionViewCell.swift */,
 				42805502268014EC00693A54 /* BoardCollectionViewCell.swift */,
 				42805504268015B400693A54 /* BoardViewController.swift */,
+				42A268DF26887D0C009A5BCC /* CustomButtonView.xib */,
+				42A268E126887D55009A5BCC /* CustomButtonView.swift */,
 			);
 			path = sesori;
 			sourceTree = "<group>";
@@ -174,6 +180,7 @@
 				42916065264BBE480072A2CF /* LaunchScreen.storyboard in Resources */,
 				42916062264BBE480072A2CF /* Assets.xcassets in Resources */,
 				42916060264BBE470072A2CF /* Main.storyboard in Resources */,
+				42A268E026887D0C009A5BCC /* CustomButtonView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -229,6 +236,7 @@
 				4291605D264BBE470072A2CF /* ViewController.swift in Sources */,
 				428CB0552654268E002CAFE9 /* LunchViewController.swift in Sources */,
 				42805503268014EC00693A54 /* BoardCollectionViewCell.swift in Sources */,
+				42A268E226887D55009A5BCC /* CustomButtonView.swift in Sources */,
 				42916059264BBE470072A2CF /* AppDelegate.swift in Sources */,
 				428CB053265425AD002CAFE9 /* FirstItemViewController.swift in Sources */,
 				426C3E8426577CC100672FF6 /* TimetableViewController.swift in Sources */,
