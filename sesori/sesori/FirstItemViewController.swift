@@ -14,5 +14,18 @@ class FirstItemViewController : UIViewController {
     override func viewDidLoad() {
         studentView?.layer.cornerRadius = 40
         studentView?.layer.maskedCorners = [.layerMaxXMaxYCorner, .layerMinXMaxYCorner]
+        let gesture = UITapGestureRecognizer(target: self, action: #selector(self.goPage(sender:)))
+        self.lunchUIView.addGestureRecognizer(gesture)
+
     }
+    
+    @objc func goPage(sender:UIGestureRecognizer)
+        {
+            let storyboard  = UIStoryboard(name: "Main", bundle: nil)
+            let vc = storyboard.instantiateViewController(withIdentifier: "Lunch_yw")
+        
+            vc.modalTransitionStyle = UIModalTransitionStyle.coverVertical
+                
+            self.present(vc, animated: true)
+        }
 }

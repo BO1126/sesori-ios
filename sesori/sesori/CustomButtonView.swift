@@ -29,13 +29,12 @@ class CustomButtonView : UIView {
             customView.frame = self.bounds
             customView.autoresizingMask = [.flexibleHeight, .flexibleWidth]
             
-            customView.layer.borderWidth = 1
             customView.layer.cornerRadius = 20
-            customView.layer.masksToBounds = true
-            customView.layer.shadowOpacity = 1
-            customView.layer.shadowRadius = 7
+            customView.layer.masksToBounds = false
+            customView.layer.shadowOpacity = 0.2
+            customView.layer.shadowRadius = 8
             
-            cornerView.layer.cornerRadius = 15
+            cornerView.layer.cornerRadius = cornerView.frame.size.width / 2
             cornerView.layer.masksToBounds = true
             
             

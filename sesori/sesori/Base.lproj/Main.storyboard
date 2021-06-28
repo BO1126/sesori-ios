@@ -3,6 +3,7 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -258,15 +259,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GcJ-AJ-KWw">
-                                <rect key="frame" x="81" y="386" width="92" height="36"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <state key="normal" title="오늘의 급식"/>
-                                <connections>
-                                    <segue destination="1no-PE-Q7O" kind="presentation" id="ieF-gc-XDh"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pKd-So-nXD">
                                 <rect key="frame" x="239" y="386" width="109" height="36"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -274,15 +266,6 @@
                                 <state key="normal" title="이번주 시간표"/>
                                 <connections>
                                     <segue destination="gbl-Rb-lpV" kind="presentation" id="TCP-AH-JCv"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QNM-SO-tD0">
-                                <rect key="frame" x="92" y="532" width="70" height="36"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <state key="normal" title="학사일정"/>
-                                <connections>
-                                    <segue destination="ehs-kl-epz" kind="presentation" id="21Y-wp-Ibn"/>
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="BN0-R4-cS9">
@@ -304,13 +287,22 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
-                                <color key="backgroundColor" red="0.33725490200000002" green="0.70196078429999997" blue="0.83529411760000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" name="MainColor"/>
                             </view>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Sbg-2L-X8B" customClass="CustomButtonView" customModule="sesori" customModuleProvider="target">
-                                <rect key="frame" x="73" y="604" width="134" height="134"/>
+                                <rect key="frame" x="47" y="368" width="160" height="160"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QNM-SO-tD0">
+                                <rect key="frame" x="92" y="588" width="70" height="36"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="학사일정"/>
+                                <connections>
+                                    <segue destination="ehs-kl-epz" kind="presentation" id="21Y-wp-Ibn"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
@@ -329,24 +321,24 @@
         <!--Lunch View Controller-->
         <scene sceneID="ofj-hY-dQg">
             <objects>
-                <viewController id="1no-PE-Q7O" customClass="LunchViewController" customModule="sesori" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Lunch_yw" id="1no-PE-Q7O" customClass="LunchViewController" customModule="sesori" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="BZh-kB-JMS"/>
                         <viewControllerLayoutGuide type="bottom" id="YwZ-SQ-CHT"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="2as-Fe-jec">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" style="inline" translatesAutoresizingMaskIntoConstraints="NO" id="KmZ-ao-mEN">
-                                <rect key="frame" x="0.0" y="50" width="414" height="352"/>
+                                <rect key="frame" x="0.0" y="94" width="414" height="352"/>
                                 <locale key="locale" localeIdentifier="ko_KR"/>
                                 <connections>
                                     <action selector="didLunchDatePickerValueChanged" destination="1no-PE-Q7O" eventType="valueChanged" id="3ep-Ti-fcg"/>
                                 </connections>
                             </datePicker>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="급식" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SxV-6I-dZq">
-                                <rect key="frame" x="30" y="442" width="29.5" height="20.5"/>
+                                <rect key="frame" x="30" y="486" width="29.5" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -377,12 +369,13 @@
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="d4R-7B-0Yo">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="selectedImageTintColor" red="0.33725490200000002" green="0.70196078429999997" blue="0.83529411760000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="selectedImageTintColor" name="MainColor"/>
                     </tabBar>
                     <connections>
                         <segue destination="noa-Z6-JxV" kind="relationship" relationship="viewControllers" id="4r4-Ff-kc2"/>
                         <segue destination="H7h-A6-iYs" kind="relationship" relationship="viewControllers" id="EtT-bP-VfB"/>
                         <segue destination="aC0-Os-hfl" kind="relationship" relationship="viewControllers" id="mJR-CZ-bX3"/>
+                        <segue destination="qcB-Yt-Auh" kind="relationship" relationship="viewControllers" id="R5R-E7-bRv"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ilQ-Ag-C2x" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -400,6 +393,9 @@
         <image name="프로필1" width="77" height="77"/>
         <image name="홈" width="83" height="76"/>
         <image name="홈1" width="83" height="76"/>
+        <namedColor name="MainColor">
+            <color red="0.0" green="0.70777267217636108" blue="0.84451651573181152" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

@@ -3,6 +3,7 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -31,7 +32,7 @@
                             </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <color key="backgroundColor" red="0.33725490200000002" green="0.70196078429999997" blue="0.83529411760000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" name="MainColor"/>
                         <constraints>
                             <constraint firstItem="c0M-x5-Hgw" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="Ns3-Pi-XzU"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="c0M-x5-Hgw" secondAttribute="bottom" constant="310" id="cup-Jf-3uA"/>
@@ -46,5 +47,8 @@
     <resources>
         <image name="세소리" width="472" height="472"/>
         <image name="세소리 타이틀" width="252" height="133"/>
+        <namedColor name="MainColor">
+            <color red="0.0" green="0.70777267217636108" blue="0.84451651573181152" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
     </resources>
 </document>
