@@ -12,6 +12,8 @@
 		42763C36265F559C000CC746 /* ContainerTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42763C35265F559C000CC746 /* ContainerTableViewController.swift */; };
 		42805503268014EC00693A54 /* BoardCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42805502268014EC00693A54 /* BoardCollectionViewCell.swift */; };
 		42805505268015B400693A54 /* BoardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42805504268015B400693A54 /* BoardViewController.swift */; };
+		428341D4268ABD530068C044 /* TimetableCustomView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 428341D3268ABD530068C044 /* TimetableCustomView.xib */; };
+		428341D6268ABD820068C044 /* TimetableCustomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 428341D5268ABD820068C044 /* TimetableCustomView.swift */; };
 		428CB053265425AD002CAFE9 /* FirstItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 428CB052265425AD002CAFE9 /* FirstItemViewController.swift */; };
 		428CB0552654268E002CAFE9 /* LunchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 428CB0542654268E002CAFE9 /* LunchViewController.swift */; };
 		42916059264BBE470072A2CF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42916058264BBE470072A2CF /* AppDelegate.swift */; };
@@ -31,6 +33,8 @@
 		42763C35265F559C000CC746 /* ContainerTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContainerTableViewController.swift; sourceTree = "<group>"; };
 		42805502268014EC00693A54 /* BoardCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardCollectionViewCell.swift; sourceTree = "<group>"; };
 		42805504268015B400693A54 /* BoardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardViewController.swift; sourceTree = "<group>"; };
+		428341D3268ABD530068C044 /* TimetableCustomView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TimetableCustomView.xib; sourceTree = "<group>"; };
+		428341D5268ABD820068C044 /* TimetableCustomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimetableCustomView.swift; sourceTree = "<group>"; };
 		428CB052265425AD002CAFE9 /* FirstItemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstItemViewController.swift; sourceTree = "<group>"; };
 		428CB0542654268E002CAFE9 /* LunchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LunchViewController.swift; sourceTree = "<group>"; };
 		42916055264BBE470072A2CF /* sesori.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = sesori.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -97,6 +101,8 @@
 				42805504268015B400693A54 /* BoardViewController.swift */,
 				42A268DF26887D0C009A5BCC /* LunchCustomView.xib */,
 				42A268E126887D55009A5BCC /* LunchCustomView.swift */,
+				428341D3268ABD530068C044 /* TimetableCustomView.xib */,
+				428341D5268ABD820068C044 /* TimetableCustomView.swift */,
 			);
 			path = sesori;
 			sourceTree = "<group>";
@@ -178,6 +184,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				42916065264BBE480072A2CF /* LaunchScreen.storyboard in Resources */,
+				428341D4268ABD530068C044 /* TimetableCustomView.xib in Resources */,
 				42916062264BBE480072A2CF /* Assets.xcassets in Resources */,
 				42916060264BBE470072A2CF /* Main.storyboard in Resources */,
 				42A268E026887D0C009A5BCC /* LunchCustomView.xib in Resources */,
@@ -242,6 +249,7 @@
 				426C3E8426577CC100672FF6 /* TimetableViewController.swift in Sources */,
 				4275276A2676E01C008A37E1 /* TimeCollectionViewCell.swift in Sources */,
 				4291605B264BBE470072A2CF /* SceneDelegate.swift in Sources */,
+				428341D6268ABD820068C044 /* TimetableCustomView.swift in Sources */,
 				42763C36265F559C000CC746 /* ContainerTableViewController.swift in Sources */,
 				42805505268015B400693A54 /* BoardViewController.swift in Sources */,
 			);

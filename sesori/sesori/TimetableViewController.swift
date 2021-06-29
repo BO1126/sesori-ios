@@ -149,6 +149,10 @@ class TimetableViewController : UIViewController, UICollectionViewDataSource, UI
         
     }
     
+    @IBAction func dismissView(){
+        dismiss(animated: true)
+    }
+    
     // MARK: - decode
     struct Timetable: Codable {
         let hisTimetable: [HisTimetable]

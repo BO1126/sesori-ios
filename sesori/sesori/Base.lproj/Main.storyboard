@@ -105,23 +105,23 @@
         <!--Timetable View Controller-->
         <scene sceneID="3q4-Vp-uSI">
             <objects>
-                <viewController id="gbl-Rb-lpV" customClass="TimetableViewController" customModule="sesori" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Timetable_yw" id="gbl-Rb-lpV" customClass="TimetableViewController" customModule="sesori" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="xgo-xw-ouA"/>
                         <viewControllerLayoutGuide type="bottom" id="ffY-kh-zrD"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8GG-QU-iA2">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="이번주 시간표" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tt6-4I-bvu">
-                                <rect key="frame" x="30" y="50" width="93" height="21"/>
+                                <rect key="frame" x="30" y="94" width="93" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="7Pm-aF-33y">
-                                <rect key="frame" x="10" y="121" width="394" height="487"/>
+                                <rect key="frame" x="10" y="165" width="394" height="497"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="o1C-9N-RX6">
                                     <size key="itemSize" width="50" height="50"/>
@@ -155,6 +155,18 @@
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KHc-we-yn1">
+                                <rect key="frame" x="20" y="52" width="28" height="24"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="arrow.left" catalog="system">
+                                    <color key="titleColor" name="AccentColor"/>
+                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="24"/>
+                                </state>
+                                <connections>
+                                    <action selector="dismissView" destination="gbl-Rb-lpV" eventType="touchUpInside" id="2h5-cg-IgF"/>
+                                    <action selector="dismissView" destination="1no-PE-Q7O" eventType="touchUpInside" id="gEO-ch-CVX"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
@@ -266,15 +278,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pKd-So-nXD">
-                                <rect key="frame" x="239" y="386" width="109" height="36"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <state key="normal" title="이번주 시간표"/>
-                                <connections>
-                                    <segue destination="gbl-Rb-lpV" kind="presentation" id="TCP-AH-JCv"/>
-                                </connections>
-                            </button>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="BN0-R4-cS9">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="308"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -296,11 +299,6 @@
                                 </subviews>
                                 <color key="backgroundColor" name="MainColor"/>
                             </view>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Sbg-2L-X8B" customClass="LunchCustomView" customModule="sesori" customModuleProvider="target">
-                                <rect key="frame" x="47" y="368" width="160" height="160"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                            </view>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QNM-SO-tD0">
                                 <rect key="frame" x="92" y="588" width="70" height="36"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -310,6 +308,16 @@
                                     <segue destination="ehs-kl-epz" kind="presentation" id="21Y-wp-Ibn"/>
                                 </connections>
                             </button>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="BZe-oy-Pbn" customClass="TimetableCustomView" customModule="sesori" customModuleProvider="target">
+                                <rect key="frame" x="226" y="368" width="160" height="160"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Sbg-2L-X8B" customClass="LunchCustomView" customModule="sesori" customModuleProvider="target">
+                                <rect key="frame" x="30" y="368" width="160" height="160"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
@@ -317,8 +325,9 @@
                         <inset key="imageInsets" minX="27" minY="27" maxX="27" maxY="27"/>
                     </tabBarItem>
                     <connections>
-                        <outlet property="lunchUIView" destination="Sbg-2L-X8B" id="uDT-49-llz"/>
+                        <outlet property="lunchView" destination="Sbg-2L-X8B" id="Uce-S5-PzG"/>
                         <outlet property="studentView" destination="BN0-R4-cS9" id="bjF-Fy-9CL"/>
+                        <outlet property="timetableView" destination="BZe-oy-Pbn" id="OFb-Gs-Ztx"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PxD-3E-afe" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
