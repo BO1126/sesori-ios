@@ -7,7 +7,7 @@
 
 import UIKit
 
-class CustomButtonView : UIView {
+class LunchCustomView : UIView {
     
     @IBOutlet weak var customView: UIView!
     @IBOutlet weak var cornerView : UIView!
@@ -23,8 +23,8 @@ class CustomButtonView : UIView {
         }
         
         private func commonInit(){
-            let bundle = Bundle(for: CustomButtonView.self)
-            bundle.loadNibNamed("CustomButtonView", owner: self, options: nil)
+            let bundle = Bundle(for: LunchCustomView.self)
+            bundle.loadNibNamed("LunchCustomView", owner: self, options: nil)
             addSubview(customView)
             customView.frame = self.bounds
             customView.autoresizingMask = [.flexibleHeight, .flexibleWidth]

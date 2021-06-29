@@ -56,6 +56,10 @@ class LunchViewController : UIViewController {
         self.todayLunchLabel.text = converter
     }
     
+    @IBAction func dismissView(){
+        dismiss(animated: true)
+    }
+    
     struct Lunch: Codable {
         let mealServiceDietInfo: [MealServiceDietInfo]
     }

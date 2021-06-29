@@ -8,7 +8,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CustomButtonView" customModule="sesori" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LunchCustomView" customModule="sesori" customModuleProvider="target">
             <connections>
                 <outlet property="cornerView" destination="lXW-fh-vaI" id="E4n-lQ-bQm"/>
                 <outlet property="customView" destination="iN0-l3-epB" id="N3l-D5-mP9"/>
@@ -56,7 +56,7 @@
     <resources>
         <image name="급식표" width="137" height="86"/>
         <namedColor name="MainColor">
-            <color red="0.0" green="0.70777267217636108" blue="0.84451651573181152" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.0" green="0.70800000429153442" blue="0.84500002861022949" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

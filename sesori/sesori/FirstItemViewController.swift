@@ -9,7 +9,7 @@ import UIKit
 
 class FirstItemViewController : UIViewController {
     @IBOutlet weak var studentView : UIView!
-    @IBOutlet weak var lunchUIView : UIView!
+    @IBOutlet weak var lunchUIView : UIControl!
     
     override func viewDidLoad() {
         studentView?.layer.cornerRadius = 40
@@ -19,13 +19,15 @@ class FirstItemViewController : UIViewController {
 
     }
     
-    @objc func goPage(sender:UIGestureRecognizer)
-        {
-            let storyboard  = UIStoryboard(name: "Main", bundle: nil)
-            let vc = storyboard.instantiateViewController(withIdentifier: "Lunch_yw")
-        
-            vc.modalTransitionStyle = UIModalTransitionStyle.coverVertical
+    @objc func goPage(sender:UIGestureRecognizer){
+            
+        let storyboard  = UIStoryboard(name: "Main", bundle: nil)
+        let vc = storyboard.instantiateViewController(withIdentifier: "Lunch_yw")
+            
+        vc.modalPresentationStyle = .fullScreen
+        vc.modalTransitionStyle = UIModalTransitionStyle.coverVertical
                 
-            self.present(vc, animated: true)
+        self.present(vc, animated: true)
         }
+    
 }
