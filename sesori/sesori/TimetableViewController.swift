@@ -18,6 +18,9 @@ class TimetableViewController : UIViewController, UICollectionViewDataSource, UI
     var thisMondayDate = String()
     var thisFridayDate = String()
     
+    var nextMondayDate = String()
+    var nextFridayDate = String()
+    
     @IBOutlet weak var collectionview : UICollectionView!
     
     override func viewDidLoad() {
@@ -38,15 +41,13 @@ class TimetableViewController : UIViewController, UICollectionViewDataSource, UI
         
         
         makeThisWeek()
-        getTimetableData()
+        setTimetableData()
         self.collectionview.delegate = self
         self.collectionview.dataSource = self
-        
-        
     }
     
     
-    func getTimetableData(){
+    func setTimetableData(){
         let url = "https://open.neis.go.kr/hub/hisTimetable?Type=json&pIndex=1&pSize=100&ATPT_OFCDC_SC_CODE=B10&SD_SCHUL_CODE=7010537&KEY=406a6783d8db4d5483fd44abf25d720f&GRADE=3&CLASS_NM=6&TI_FROM_YMD="+self.thisMondayDate+"&TI_TO_YMD="+self.thisFridayDate
         
         AF.request(url,
@@ -127,9 +128,9 @@ class TimetableViewController : UIViewController, UICollectionViewDataSource, UI
         formatter.dateFormat = "yyyyMMdd"
         let mondayDate = formatter.string(from: Monday!)
         
-        var fridayDate = String()
-        
         self.thisMondayDate = mondayDate
+        
+        var fridayDate = String()
         
         if todayIndex <= 4{
             let timeDifference = 4 - todayIndex
@@ -149,9 +150,41 @@ class TimetableViewController : UIViewController, UICollectionViewDataSource, UI
         
     }
     
+    func makeNextWeek(){
+        formatter.dateFormat = "yyyyMMdd"
+        let nextMonday = Calendar.current.date(byAdding: .day, value: 7, to: formatter.date(from: thisMondayDate) ?? todayDate)
+        let nextFriday = Calendar.current.date(byAdding: .day, value: 7, to: formatter.date(from: thisFridayDate) ?? todayDate)
+        self.nextMondayDate = formatter.string(from: nextMonday!)
+        self.nextFridayDate = formatter.string(from: nextFriday!)
+        print(self.nextMondayDate)
+        print(self.nextFridayDate)
+    }
+    
+    func setNextTimetableData(){
+        let url = "https://open.neis.go.kr/hub/hisTimetable?Type=json&pIndex=1&pSize=100&ATPT_OFCDC_SC_CODE=B10&SD_SCHUL_CODE=7010537&KEY=406a6783d8db4d5483fd44abf25d720f&GRADE=3&CLASS_NM=6&TI_FROM_YMD="+self.nextMondayDate+"&TI_TO_YMD="+self.nextFridayDate
+        
+        AF.request(url,
+                   method: .get).responseJSON{
+                    response in
+                    let decoder = JSONDecoder()
+                    let timetable = try? decoder.decode(Timetable.self, from: response.data!)
+                    
+                    let timetableData = "\(String(describing: timetable))"
+                    self.timelist = self.convertTimetableText(timetableData: timetableData)
+                    self.collectionview.reloadData()
+            }
+    }
+    
     @IBAction func dismissView(){
         dismiss(animated: true)
     }
+    
+    @IBAction func touchNextWeekButton(){
+        makeNextWeek()
+        self.setNextTimetableData()
+    }
+    
+    
     
     // MARK: - decode
     struct Timetable: Codable {

@@ -48,7 +48,7 @@
         <image name="세소리" width="472" height="472"/>
         <image name="세소리 타이틀" width="252" height="133"/>
         <namedColor name="MainColor">
-            <color red="0.0" green="0.70777267217636108" blue="0.84451651573181152" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.40784314274787903" green="0.70588237047195435" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
     </resources>
 </document>

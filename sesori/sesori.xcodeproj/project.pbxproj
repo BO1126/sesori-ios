@@ -85,11 +85,11 @@
 		42916057264BBE470072A2CF /* sesori */ = {
 			isa = PBXGroup;
 			children = (
+				42916061264BBE480072A2CF /* Assets.xcassets */,
 				42916058264BBE470072A2CF /* AppDelegate.swift */,
 				4291605A264BBE470072A2CF /* SceneDelegate.swift */,
 				4291605C264BBE470072A2CF /* ViewController.swift */,
 				4291605E264BBE470072A2CF /* Main.storyboard */,
-				42916061264BBE480072A2CF /* Assets.xcassets */,
 				42916063264BBE480072A2CF /* LaunchScreen.storyboard */,
 				42916066264BBE480072A2CF /* Info.plist */,
 				428CB052265425AD002CAFE9 /* FirstItemViewController.swift */,
