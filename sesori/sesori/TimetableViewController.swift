@@ -117,7 +117,6 @@ class TimetableViewController : UIViewController, UICollectionViewDataSource, UI
         formatter.locale = Locale(identifier: "ko-KR")
         let thisday = formatter.string(from: todayDate)
         exonerationThisWeekMondayAndFriday(thisday: thisday)
-        print(thisday)
     }
     
     func exonerationThisWeekMondayAndFriday(thisday : String){
@@ -156,8 +155,6 @@ class TimetableViewController : UIViewController, UICollectionViewDataSource, UI
         let nextFriday = Calendar.current.date(byAdding: .day, value: 7, to: formatter.date(from: thisFridayDate) ?? todayDate)
         self.nextMondayDate = formatter.string(from: nextMonday!)
         self.nextFridayDate = formatter.string(from: nextFriday!)
-        print(self.nextMondayDate)
-        print(self.nextFridayDate)
     }
     
     func setNextTimetableData(){

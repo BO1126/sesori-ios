@@ -35,7 +35,7 @@
                     <rect key="frame" x="43" y="12" width="65" height="65"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <subviews>
-                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="시간표" translatesAutoresizingMaskIntoConstraints="NO" id="zAi-xs-egT">
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="time_table_white" translatesAutoresizingMaskIntoConstraints="NO" id="zAi-xs-egT">
                             <rect key="frame" x="15" y="15" width="35" height="35"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         </imageView>
@@ -56,9 +56,9 @@
         </view>
     </objects>
     <resources>
-        <image name="시간표" width="95" height="95"/>
+        <image name="time_table_white" width="512" height="500"/>
         <namedColor name="MainColor">
-            <color red="0.0" green="0.70800000429153442" blue="0.84500002861022949" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.40799996256828308" green="0.70599997043609619" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

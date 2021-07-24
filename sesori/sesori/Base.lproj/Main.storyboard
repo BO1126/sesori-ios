@@ -197,7 +197,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jP7-lb-A3q" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2806" y="-246"/>
+            <point key="canvasLocation" x="3835" y="-927"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="jOF-3c-WUO">
@@ -208,7 +208,7 @@
                         <viewControllerLayoutGuide type="bottom" id="AhB-wH-Uov"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="35j-j7-scp">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <datePicker contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" style="inline" translatesAutoresizingMaskIntoConstraints="NO" id="phX-eb-DE7">
@@ -240,7 +240,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ejm-ak-whw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2806" y="458"/>
+            <point key="canvasLocation" x="2806" y="-246"/>
         </scene>
         <!--마이페이지-->
         <scene sceneID="3R8-Oc-jqP">
@@ -255,7 +255,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2IR-GR-WOh">
-                                <rect key="frame" x="343" y="52" width="30" height="30"/>
+                                <rect key="frame" x="343" y="64" width="30" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="설정1"/>
                                 <connections>
@@ -271,7 +271,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hAW-5F-cOl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1805.7971014492755" y="1277.6785714285713"/>
+            <point key="canvasLocation" x="1806" y="1180"/>
         </scene>
         <!--설정-->
         <scene sceneID="6un-zR-5C5">
@@ -322,7 +322,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EuG-SB-AhM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3522" y="1278"/>
+            <point key="canvasLocation" x="3835" y="1180"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="6TJ-kx-pyx">
@@ -338,7 +338,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cdL-Xf-Z01" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2667" y="1278"/>
+            <point key="canvasLocation" x="2806" y="1180"/>
         </scene>
         <!--홈-->
         <scene sceneID="SAn-Np-zdC">
@@ -379,7 +379,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="학사일정"/>
                                 <connections>
-                                    <segue destination="ehs-kl-epz" kind="presentation" id="21Y-wp-Ibn"/>
+                                    <segue destination="ehs-kl-epz" kind="presentation" modalPresentationStyle="fullScreen" id="21Y-wp-Ibn"/>
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Sbg-2L-X8B" customClass="LunchCustomView" customModule="sesori" customModuleProvider="target">
@@ -498,10 +498,10 @@
             <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="MainColor">
-            <color red="0.40784314274787903" green="0.70588237047195435" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.40799996256828308" green="0.70599997043609619" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="SubColor">
-            <color red="0.52549019607843139" green="0.45882352941176469" blue="0.76078431372549016" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.52499997615814209" green="0.45899999141693115" blue="0.76099997758865356" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
