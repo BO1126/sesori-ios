@@ -56,7 +56,7 @@
     <resources>
         <image name="급식표" width="137" height="86"/>
         <namedColor name="MainColor">
-            <color red="0.0" green="0.70800000429153442" blue="0.84500002861022949" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.40799996256828308" green="0.70599997043609619" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

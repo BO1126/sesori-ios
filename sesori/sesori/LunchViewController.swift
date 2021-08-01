@@ -9,25 +9,22 @@ import UIKit
 import Alamofire
 
 class LunchViewController : UIViewController {
-    
     @IBOutlet weak var todayLunchLabel : UILabel!
     @IBOutlet weak var lunchDatePicker : UIDatePicker!
     
     override func viewDidLoad() {
-        let formatter = DateFormatter()
-        formatter.dateFormat = "yyyyMMdd"
-        let thisday = formatter.string(from: lunchDatePicker.date)
-        getLunchData(pickDate: thisday)
+        getLunchData()
     }
     
     @IBAction func didLunchDatePickerValueChanged(){
-        let formatter = DateFormatter()
-        formatter.dateFormat = "yyyyMMdd"
-        let userPickDate = formatter.string(from: lunchDatePicker.date)
-        getLunchData(pickDate: userPickDate)
+        getLunchData()
     }
     
-    func getLunchData(pickDate : String){
+    func getLunchData(){
+        let formatter = DateFormatter()
+        formatter.dateFormat = "yyyyMMdd"
+        let pickDate = formatter.string(from: lunchDatePicker.date)
+        
         let url = "https://open.neis.go.kr/hub/mealServiceDietInfo?Type=json&pIndex=1&pSize=1&ATPT_OFCDC_SC_CODE=B10&SD_SCHUL_CODE=7010537&MLSV_YMD="+pickDate+"&KEY=406a6783d8db4d5483fd44abf25d720f"
         
         AF.request(url,
