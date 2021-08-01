@@ -14,10 +14,9 @@ class LunchViewController : UIViewController {
     @IBOutlet weak var lunchDatePicker : UIDatePicker!
     
     override func viewDidLoad() {
-        let todayDate = Date()
         let formatter = DateFormatter()
         formatter.dateFormat = "yyyyMMdd"
-        let thisday = formatter.string(from: todayDate)
+        let thisday = formatter.string(from: lunchDatePicker.date)
         getLunchData(pickDate: thisday)
     }
     
@@ -29,7 +28,6 @@ class LunchViewController : UIViewController {
     }
     
     func getLunchData(pickDate : String){
-        
         let url = "https://open.neis.go.kr/hub/mealServiceDietInfo?Type=json&pIndex=1&pSize=1&ATPT_OFCDC_SC_CODE=B10&SD_SCHUL_CODE=7010537&MLSV_YMD="+pickDate+"&KEY=406a6783d8db4d5483fd44abf25d720f"
         
         AF.request(url,
