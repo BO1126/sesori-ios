@@ -42,11 +42,11 @@ class LunchViewController : UIViewController {
         var converter : String = todayLunch
         converter = converter.replacingOccurrences(of: "<br/>", with: "\n")
         let arr = converter.components(separatedBy: "\"")
-        if arr[0] == "nil" {
-            converter = "해당 날짜는 급식이 없습니다!"
+        if arr[0] != "nil" {
+            converter = arr[1]
         }
         else {
-            converter = arr[1]
+            converter = "해당 날짜는 급식이 없습니다!"
         }
         self.todayLunchLabel.text = converter
     }
