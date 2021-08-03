@@ -31,24 +31,16 @@ class LunchViewController : UIViewController {
                    method: .get).responseJSON{
                     response in
                     let decoder = JSONDecoder()
-                    let lunch = try? decoder.decode(Lunch.self, from: response.data!)
-                    let lunchData = "\(String(describing: lunch))"
-                    self.convertLunchText(todayLunch: lunchData)
+                    let lunchData = try? decoder.decode(Lunch.self, from: response.data!)
+                    if let lunch = lunchData{
+                        var lunchString : String = "\(String(describing: lunch))"
+                        lunchString = lunchString.replacingOccurrences(of: "<br/>", with: "\n")
+                        let lunchArray : Array = lunchString.components(separatedBy: "\"")
+                        self.todayLunchLabel.text = lunchArray[1]
+                    }else{
+                        self.todayLunchLabel.text = "해당 날짜는 급식이 없습니다."
+                    }
                    }
-    }
-    
-    
-    func convertLunchText(todayLunch : String){
-        var converter : String = todayLunch
-        converter = converter.replacingOccurrences(of: "<br/>", with: "\n")
-        let arr = converter.components(separatedBy: "\"")
-        if arr[0] != "nil" {
-            converter = arr[1]
-        }
-        else {
-            converter = "해당 날짜는 급식이 없습니다!"
-        }
-        self.todayLunchLabel.text = converter
     }
     
     @IBAction func dismissView(){
