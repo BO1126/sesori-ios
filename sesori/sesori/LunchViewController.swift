@@ -27,8 +27,7 @@ class LunchViewController : UIViewController {
         
         let url = "https://open.neis.go.kr/hub/mealServiceDietInfo?Type=json&pIndex=1&pSize=1&ATPT_OFCDC_SC_CODE=B10&SD_SCHUL_CODE=7010537&MLSV_YMD="+pickDate+"&KEY=406a6783d8db4d5483fd44abf25d720f"
         
-        AF.request(url,
-                   method: .get).responseJSON{
+        AF.request(url, method: .get).responseJSON{
                     response in
                     let decoder = JSONDecoder()
                     let lunchData = try? decoder.decode(Lunch.self, from: response.data!)
@@ -40,7 +39,7 @@ class LunchViewController : UIViewController {
                     }else{
                         self.todayLunchLabel.text = "해당 날짜는 급식이 없습니다."
                     }
-                   }
+        }
     }
     
     @IBAction func dismissView(){
