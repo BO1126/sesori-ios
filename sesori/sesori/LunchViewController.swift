@@ -9,15 +9,25 @@ import UIKit
 import Alamofire
 
 class LunchViewController : UIViewController {
+    @IBOutlet weak var todayDateLabel : UILabel!
     @IBOutlet weak var todayLunchLabel : UILabel!
     @IBOutlet weak var lunchDatePicker : UIDatePicker!
+    @IBOutlet weak var lunchView : UIView!
+    
     
     override func viewDidLoad() {
         getLunchData()
+        getDatepickerDate()
+        
+        lunchView.layer.cornerRadius = 20
+        lunchView.layer.masksToBounds = false
+        lunchView.layer.shadowOpacity = 0.2
+        lunchView.layer.shadowRadius = 8
     }
     
     @IBAction func didLunchDatePickerValueChanged(){
         getLunchData()
+        getDatepickerDate()
     }
     
     func getLunchData(){
@@ -42,9 +52,18 @@ class LunchViewController : UIViewController {
         }
     }
     
+    func getDatepickerDate(){
+        let formatter = DateFormatter()
+        formatter.locale = Locale(identifier: "ko-KR")
+        formatter.dateFormat = "M월 d일 E요일"
+        let pickDate = formatter.string(from: lunchDatePicker.date)
+        todayDateLabel.text = pickDate
+    }
+    
     @IBAction func dismissView(){
         dismiss(animated: true)
     }
+    
     
     struct Lunch: Codable {
         let mealServiceDietInfo: [MealServiceDietInfo]

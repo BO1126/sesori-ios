@@ -9,6 +9,7 @@ import UIKit
 
 class FirstItemViewController : UIViewController {
     @IBOutlet weak var studentView : UIView!
+    @IBOutlet weak var todayView : UIView!
     @IBOutlet weak var lunchView : UIView!
     @IBOutlet weak var timetableView : UIView!
     @IBOutlet weak var studentLabel : UILabel!
@@ -18,6 +19,11 @@ class FirstItemViewController : UIViewController {
     override func viewDidLoad() {
         studentView?.layer.cornerRadius = 40
         studentView?.layer.maskedCorners = [.layerMaxXMaxYCorner, .layerMinXMaxYCorner]
+        
+        todayView.layer.cornerRadius = 40
+        todayView.layer.maskedCorners = [.layerMaxXMaxYCorner, .layerMinXMaxYCorner]
+        
+        
         let lunchGesture = UITapGestureRecognizer(target: self, action: #selector(self.goLunchPage(sender:)))
         let timetableGesture = UITapGestureRecognizer(target: self, action: #selector(self.goTimetablePage(sender:)))
         

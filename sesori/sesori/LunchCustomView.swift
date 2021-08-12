@@ -31,7 +31,7 @@ class LunchCustomView : UIView {
             
             customView.layer.cornerRadius = 20
             customView.layer.masksToBounds = false
-            customView.layer.shadowOpacity = 0.1
+            customView.layer.shadowOpacity = 0.2
             customView.layer.shadowRadius = 8
             
             cornerView.layer.cornerRadius = cornerView.frame.size.width / 2
