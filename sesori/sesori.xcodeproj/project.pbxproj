@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		422D416126B42A1A000EB239 /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 422D416026B42A1A000EB239 /* CalendarViewController.swift */; };
+		424D1F4126C4E20F009A13F4 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 424D1F4026C4E20F009A13F4 /* LoginViewController.swift */; };
+		424D1F4326C4E30D009A13F4 /* CustomRoundButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 424D1F4226C4E30D009A13F4 /* CustomRoundButton.swift */; };
+		424D1F4526C4EC23009A13F4 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 424D1F4426C4EC23009A13F4 /* RegisterViewController.swift */; };
 		426C3E8426577CC100672FF6 /* TimetableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 426C3E8326577CC100672FF6 /* TimetableViewController.swift */; };
 		4275276A2676E01C008A37E1 /* TimeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 427527692676E01C008A37E1 /* TimeCollectionViewCell.swift */; };
 		42763C36265F559C000CC746 /* ContainerTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42763C35265F559C000CC746 /* ContainerTableViewController.swift */; };
@@ -31,6 +34,9 @@
 
 /* Begin PBXFileReference section */
 		422D416026B42A1A000EB239 /* CalendarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarViewController.swift; sourceTree = "<group>"; };
+		424D1F4026C4E20F009A13F4 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		424D1F4226C4E30D009A13F4 /* CustomRoundButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomRoundButton.swift; sourceTree = "<group>"; };
+		424D1F4426C4EC23009A13F4 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		426C3E8326577CC100672FF6 /* TimetableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimetableViewController.swift; sourceTree = "<group>"; };
 		427527692676E01C008A37E1 /* TimeCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeCollectionViewCell.swift; sourceTree = "<group>"; };
 		42763C35265F559C000CC746 /* ContainerTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContainerTableViewController.swift; sourceTree = "<group>"; };
@@ -109,6 +115,9 @@
 				428341D5268ABD820068C044 /* TimetableCustomView.swift */,
 				427B4B6226AADD3000571EC1 /* SettingViewController.swift */,
 				422D416026B42A1A000EB239 /* CalendarViewController.swift */,
+				424D1F4026C4E20F009A13F4 /* LoginViewController.swift */,
+				424D1F4226C4E30D009A13F4 /* CustomRoundButton.swift */,
+				424D1F4426C4EC23009A13F4 /* RegisterViewController.swift */,
 			);
 			path = sesori;
 			sourceTree = "<group>";
@@ -248,7 +257,9 @@
 			files = (
 				4291605D264BBE470072A2CF /* ViewController.swift in Sources */,
 				428CB0552654268E002CAFE9 /* LunchViewController.swift in Sources */,
+				424D1F4326C4E30D009A13F4 /* CustomRoundButton.swift in Sources */,
 				42805503268014EC00693A54 /* BoardCollectionViewCell.swift in Sources */,
+				424D1F4126C4E20F009A13F4 /* LoginViewController.swift in Sources */,
 				427B4B6326AADD3000571EC1 /* SettingViewController.swift in Sources */,
 				42A268E226887D55009A5BCC /* LunchCustomView.swift in Sources */,
 				42916059264BBE470072A2CF /* AppDelegate.swift in Sources */,
@@ -257,6 +268,7 @@
 				4275276A2676E01C008A37E1 /* TimeCollectionViewCell.swift in Sources */,
 				4291605B264BBE470072A2CF /* SceneDelegate.swift in Sources */,
 				428341D6268ABD820068C044 /* TimetableCustomView.swift in Sources */,
+				424D1F4526C4EC23009A13F4 /* RegisterViewController.swift in Sources */,
 				42763C36265F559C000CC746 /* ContainerTableViewController.swift in Sources */,
 				422D416126B42A1A000EB239 /* CalendarViewController.swift in Sources */,
 				42805505268015B400693A54 /* BoardViewController.swift in Sources */,

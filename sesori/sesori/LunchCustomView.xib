@@ -34,8 +34,8 @@
                     <rect key="frame" x="43" y="12" width="65" height="65"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <subviews>
-                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="급식표" translatesAutoresizingMaskIntoConstraints="NO" id="IU4-56-Lka">
-                            <rect key="frame" x="7" y="7" width="50" height="50"/>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="급식 아이콘" translatesAutoresizingMaskIntoConstraints="NO" id="IU4-56-Lka">
+                            <rect key="frame" x="12" y="12" width="40" height="40"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         </imageView>
                     </subviews>
@@ -54,7 +54,7 @@
         </view>
     </objects>
     <resources>
-        <image name="급식표" width="137" height="86"/>
+        <image name="급식 아이콘" width="241" height="290"/>
         <namedColor name="MainColor">
             <color red="0.40799996256828308" green="0.70599997043609619" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
