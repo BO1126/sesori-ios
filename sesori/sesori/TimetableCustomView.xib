@@ -31,16 +31,24 @@
                     <color key="textColor" red="0.64705882349999999" green="0.64705882349999999" blue="0.64705882349999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="w60-oG-HgI">
-                    <rect key="frame" x="43" y="12" width="65" height="65"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="w60-oG-HgI">
+                    <rect key="frame" x="42.5" y="12" width="65" height="65"/>
                     <subviews>
-                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="time_table_white" translatesAutoresizingMaskIntoConstraints="NO" id="zAi-xs-egT">
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="time_table_white" translatesAutoresizingMaskIntoConstraints="NO" id="zAi-xs-egT">
                             <rect key="frame" x="15" y="15" width="35" height="35"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="35" id="8Tg-DY-Aw4"/>
+                                <constraint firstAttribute="height" constant="35" id="woe-Ue-GkI"/>
+                            </constraints>
                         </imageView>
                     </subviews>
                     <color key="backgroundColor" name="MainColor"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="65" id="9vj-Ny-fRh"/>
+                        <constraint firstAttribute="width" constant="65" id="CMs-DT-VHh"/>
+                        <constraint firstItem="zAi-xs-egT" firstAttribute="centerY" secondItem="w60-oG-HgI" secondAttribute="centerY" id="MK8-hx-1nD"/>
+                        <constraint firstItem="zAi-xs-egT" firstAttribute="centerX" secondItem="w60-oG-HgI" secondAttribute="centerX" id="bqk-tq-aNW"/>
+                    </constraints>
                 </view>
             </subviews>
             <viewLayoutGuide key="safeArea" id="3us-ZP-Jmn"/>
@@ -49,7 +57,10 @@
                 <constraint firstItem="WiE-gj-8Cc" firstAttribute="centerX" secondItem="xeA-vc-t1J" secondAttribute="centerX" id="Cxz-tX-U5J"/>
                 <constraint firstAttribute="bottom" secondItem="sxY-8z-lPW" secondAttribute="bottom" constant="20" id="M2x-ME-hms"/>
                 <constraint firstItem="sxY-8z-lPW" firstAttribute="top" secondItem="WiE-gj-8Cc" secondAttribute="bottom" constant="7" id="VU7-N3-h2T"/>
+                <constraint firstItem="w60-oG-HgI" firstAttribute="top" secondItem="xeA-vc-t1J" secondAttribute="top" constant="12" id="coF-pX-abT"/>
                 <constraint firstItem="sxY-8z-lPW" firstAttribute="centerX" secondItem="xeA-vc-t1J" secondAttribute="centerX" id="fqU-B2-LDC"/>
+                <constraint firstItem="w60-oG-HgI" firstAttribute="centerX" secondItem="xeA-vc-t1J" secondAttribute="centerX" id="vtB-0T-8gw"/>
+                <constraint firstItem="WiE-gj-8Cc" firstAttribute="top" secondItem="w60-oG-HgI" secondAttribute="bottom" constant="8.5" id="z7V-kI-vUI"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <point key="canvasLocation" x="140.57971014492756" y="41.517857142857139"/>
