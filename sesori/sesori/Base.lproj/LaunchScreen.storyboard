@@ -22,20 +22,30 @@
                                 <color key="textColor" name="White and Black"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="_ba" translatesAutoresizingMaskIntoConstraints="NO" id="PaZ-8F-R0O">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="_ba" translatesAutoresizingMaskIntoConstraints="NO" id="PaZ-8F-R0O">
                                 <rect key="frame" x="149" y="447" width="116" height="76"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="116" id="3Ku-ld-uMx"/>
+                                    <constraint firstAttribute="height" constant="76" id="gvN-0y-tGR"/>
+                                </constraints>
                             </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="eagle" translatesAutoresizingMaskIntoConstraints="NO" id="DMa-OK-0D7">
-                                <rect key="frame" x="120" y="324" width="175" height="115"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="eagle" translatesAutoresizingMaskIntoConstraints="NO" id="DMa-OK-0D7">
+                                <rect key="frame" x="119.5" y="324" width="175" height="115"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="115" id="txK-ak-dEP"/>
+                                    <constraint firstAttribute="width" constant="175" id="yzv-4Q-dLo"/>
+                                </constraints>
                             </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" name="MainColor"/>
                         <constraints>
+                            <constraint firstItem="PaZ-8F-R0O" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="3bM-Oa-UP4"/>
+                            <constraint firstItem="c0M-x5-Hgw" firstAttribute="top" secondItem="PaZ-8F-R0O" secondAttribute="bottom" constant="8" symbolic="YES" id="GER-jT-Km8"/>
                             <constraint firstItem="c0M-x5-Hgw" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="Ns3-Pi-XzU"/>
+                            <constraint firstItem="DMa-OK-0D7" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="baT-Q2-G9b"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="c0M-x5-Hgw" secondAttribute="bottom" constant="310" id="cup-Jf-3uA"/>
+                            <constraint firstItem="PaZ-8F-R0O" firstAttribute="top" secondItem="DMa-OK-0D7" secondAttribute="bottom" constant="8" symbolic="YES" id="hAW-Ea-zqf"/>
                         </constraints>
                     </view>
                 </viewController>
