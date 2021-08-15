@@ -473,7 +473,6 @@
                                 </state>
                                 <connections>
                                     <action selector="dismissView" destination="gbl-Rb-lpV" eventType="touchUpInside" id="2h5-cg-IgF"/>
-                                    <action selector="dismissView" destination="1no-PE-Q7O" eventType="touchUpInside" id="gEO-ch-CVX"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -530,7 +529,6 @@
                                 </state>
                                 <connections>
                                     <action selector="dismissView" destination="gbl-Rb-lpV" eventType="touchUpInside" id="Jog-5W-5ly"/>
-                                    <action selector="dismissView" destination="1no-PE-Q7O" eventType="touchUpInside" id="Lid-sW-jUY"/>
                                     <action selector="dismissView" destination="ehs-kl-epz" eventType="touchUpInside" id="Vzt-rK-yWN"/>
                                 </connections>
                             </button>
@@ -830,7 +828,7 @@
                                     <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="24"/>
                                 </state>
                                 <connections>
-                                    <action selector="dismissView" destination="1no-PE-Q7O" eventType="touchUpInside" id="gmb-5N-O7x"/>
+                                    <action selector="dismissView" destination="1no-PE-Q7O" eventType="touchUpInside" id="oKX-LK-GgD"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SP1-si-29W">
@@ -840,6 +838,9 @@
                                     <constraint firstAttribute="height" constant="50" id="qMy-YQ-SWr"/>
                                 </constraints>
                                 <state key="normal" image="arrow.right"/>
+                                <connections>
+                                    <action selector="touchNextLunchButton" destination="1no-PE-Q7O" eventType="touchUpInside" id="jqC-jg-CUp"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Y2g-E3-ycx">
                                 <rect key="frame" x="30" y="232" width="50" height="50"/>
@@ -848,6 +849,9 @@
                                     <constraint firstAttribute="height" constant="50" id="Rt7-at-IHK"/>
                                 </constraints>
                                 <state key="normal" image="arrow.left"/>
+                                <connections>
+                                    <action selector="touchBackLunchButton" destination="1no-PE-Q7O" eventType="touchUpInside" id="gg8-o3-Mqe"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>

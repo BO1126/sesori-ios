@@ -67,7 +67,16 @@ class LunchViewController : UIViewController {
     }
     
     @IBAction func touchNextLunchButton(){
-        
+        lunchDatePicker.date = Calendar.current.date(byAdding: .day, value: 1,to: lunchDatePicker.date) ?? lunchDatePicker.date
+        getLunchData()
+        getDatepickerDate()
+    }
+    
+    @IBAction func touchBackLunchButton(){
+        lunchDatePicker.date = Calendar.current.date(byAdding: .day, value: -1, to: lunchDatePicker.date) ??
+            lunchDatePicker.date
+        getLunchData()
+        getDatepickerDate()
     }
     
     
