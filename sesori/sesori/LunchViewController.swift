@@ -45,9 +45,11 @@ class LunchViewController : UIViewController {
                         var lunchString : String = "\(String(describing: lunch))"
                         lunchString = lunchString.replacingOccurrences(of: "<br/>", with: "\n")
                         let lunchArray : Array = lunchString.components(separatedBy: "\"")
-                        self.todayLunchLabel.text = lunchArray[1]
+                        let removeNumberString : String = lunchArray[1].components(separatedBy: CharacterSet.decimalDigits).joined()
+                        let removeDotString : String = removeNumberString.replacingOccurrences(of: ".", with: "")
+                        self.todayLunchLabel.text = removeDotString
                     }else{
-                        self.todayLunchLabel.text = "해당 날짜는 급식이 없습니다."
+                        self.todayLunchLabel.text = "해당 날짜는 급식이 없습니다"
                     }
         }
     }
@@ -62,6 +64,10 @@ class LunchViewController : UIViewController {
     
     @IBAction func dismissView(){
         dismiss(animated: true)
+    }
+    
+    @IBAction func touchNextLunchButton(){
+        
     }
     
     
