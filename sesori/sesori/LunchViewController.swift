@@ -7,6 +7,7 @@
 
 import UIKit
 import Alamofire
+import SwiftyJSON
 
 class LunchViewController : UIViewController {
     @IBOutlet weak var todayDateLabel : UILabel!
@@ -37,20 +38,21 @@ class LunchViewController : UIViewController {
         
         let url = "https://open.neis.go.kr/hub/mealServiceDietInfo?Type=json&pIndex=1&pSize=1&ATPT_OFCDC_SC_CODE=B10&SD_SCHUL_CODE=7010537&MLSV_YMD="+pickDate+"&KEY=406a6783d8db4d5483fd44abf25d720f"
         
-        AF.request(url, method: .get).responseJSON{
-                    response in
-                    let decoder = JSONDecoder()
-                    let lunchData = try? decoder.decode(Lunch.self, from: response.data!)
-                    if let lunch = lunchData{
-                        var lunchString : String = "\(String(describing: lunch))"
-                        lunchString = lunchString.replacingOccurrences(of: "<br/>", with: "\n")
-                        let lunchArray : Array = lunchString.components(separatedBy: "\"")
-                        let removeNumberString : String = lunchArray[1].components(separatedBy: CharacterSet.decimalDigits).joined()
-                        let removeDotString : String = removeNumberString.replacingOccurrences(of: ".", with: "")
-                        self.todayLunchLabel.text = removeDotString
-                    }else{
-                        self.todayLunchLabel.text = "해당 날짜는 급식이 없습니다"
-                    }
+        AF.request(url, method: .get, encoding: JSONEncoding.default,headers: [:]).responseJSON{
+            response in
+            switch response.result {
+            case .success(let value):
+                let json = JSON(value)
+                let meal = json["mealServiceDietInfo"].arrayValue[1]
+                let row = meal["row"].arrayValue[0]
+                let ddishNm = row["DDISH_NM"].stringValue
+                let lunchString = ddishNm.replacingOccurrences(of: "<br/>", with: "\n")
+                let removeNumberString : String = lunchString.components(separatedBy: CharacterSet.decimalDigits).joined()
+                let removeDotString : String = removeNumberString.replacingOccurrences(of: ".", with: "")
+                self.todayLunchLabel.text = removeDotString
+            default:
+                return
+            }
         }
     }
     
@@ -81,11 +83,11 @@ class LunchViewController : UIViewController {
     
     
     struct Lunch: Codable {
-        let mealServiceDietInfo: [MealServiceDietInfo]
+        let mealServiceDietInfo : [MealServiceDietInfo]
     }
 
     struct MealServiceDietInfo: Codable {
-        let row: [Row]?
+        let row : [Row]?
         
     }
     struct Row : Codable {

@@ -10,4 +10,5 @@ target 'sesori' do
   pod 'KakaoSDKAuth'
   pod 'KakaoSDKUser'
   pod 'Alamofire'
+  pod 'SwiftyJSON'
 end

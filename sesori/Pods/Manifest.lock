@@ -11,12 +11,14 @@ PODS:
     - KakaoSDKCommon/Common (= 2.5.2)
   - KakaoSDKUser (2.5.2):
     - KakaoSDKAuth (= 2.5.2)
+  - SwiftyJSON (5.0.1)
 
 DEPENDENCIES:
   - Alamofire
   - KakaoSDKAuth
   - KakaoSDKCommon
   - KakaoSDKUser
+  - SwiftyJSON
 
 SPEC REPOS:
   trunk:
@@ -24,13 +26,15 @@ SPEC REPOS:
     - KakaoSDKAuth
     - KakaoSDKCommon
     - KakaoSDKUser
+    - SwiftyJSON
 
 SPEC CHECKSUMS:
   Alamofire: e447a2774a40c996748296fa2c55112fdbbc42f9
   KakaoSDKAuth: 81715662c03e4c8c1a140f293e9fd6fd68b2e9dd
   KakaoSDKCommon: 887e22f7aa4647bd0a7d1397512fc5f6211b83d6
   KakaoSDKUser: b79c1a18da69681de7c9d3fa59e83c37b711ce7e
+  SwiftyJSON: 2f33a42c6fbc52764d96f13368585094bfd8aa5e
 
-PODFILE CHECKSUM: 7f926f287bd1143b4cb085f77fde44039e7833fb
+PODFILE CHECKSUM: e9c6f4c93c434ef131f8c916f43ca30815b5b49c
 
 COCOAPODS: 1.10.1

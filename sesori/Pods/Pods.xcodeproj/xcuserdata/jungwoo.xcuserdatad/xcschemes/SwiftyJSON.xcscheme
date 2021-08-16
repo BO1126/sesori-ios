@@ -14,9 +14,9 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "205D6EF1B8DCC8419E2F53266F6ADCDC"
-               BuildableName = "KakaoSDKCommon.framework"
-               BlueprintName = "KakaoSDKCommon"
+               BlueprintIdentifier = "D118A6A04828FD3CDA8640CD2B6796D2"
+               BuildableName = "SwiftyJSON.framework"
+               BlueprintName = "SwiftyJSON"
                ReferencedContainer = "container:Pods.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
