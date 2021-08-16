@@ -42,14 +42,18 @@ class LunchViewController : UIViewController {
             response in
             switch response.result {
             case .success(let value):
-                let json = JSON(value)
-                let meal = json["mealServiceDietInfo"].arrayValue[1]
-                let row = meal["row"].arrayValue[0]
-                let ddishNm = row["DDISH_NM"].stringValue
-                let lunchString = ddishNm.replacingOccurrences(of: "<br/>", with: "\n")
-                let removeNumberString : String = lunchString.components(separatedBy: CharacterSet.decimalDigits).joined()
-                let removeDotString : String = removeNumberString.replacingOccurrences(of: ".", with: "")
-                self.todayLunchLabel.text = removeDotString
+                let json : JSON = JSON(value)
+                if json["mealServiceDietInfo"].exists(){
+                    let meal = json["mealServiceDietInfo"].arrayValue[1]
+                    let row = meal["row"].arrayValue[0]
+                    let ddishNm = row["DDISH_NM"].stringValue
+                    let lunchString = ddishNm.replacingOccurrences(of: "<br/>", with: "\n")
+                    let removeNumberString : String = lunchString.components(separatedBy: CharacterSet.decimalDigits).joined()
+                    let removeDotString : String = removeNumberString.replacingOccurrences(of: ".", with: "")
+                    self.todayLunchLabel.text = removeDotString
+                }else{
+                    self.todayLunchLabel.text = "해당 날짜는 급식이 없습니다"
+                }
             default:
                 return
             }
