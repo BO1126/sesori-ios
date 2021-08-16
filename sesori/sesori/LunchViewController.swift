@@ -80,23 +80,4 @@ class LunchViewController : UIViewController {
         getLunchData()
         getDatepickerDate()
     }
-    
-    
-    struct Lunch: Codable {
-        let mealServiceDietInfo : [MealServiceDietInfo]
-    }
-
-    struct MealServiceDietInfo: Codable {
-        let row : [Row]?
-        
-    }
-    struct Row : Codable {
-        let ddishNm : String
-        
-        enum CodingKeys: String, CodingKey {
-            case ddishNm = "DDISH_NM"
-        }
-        
-        
-    }
 }
