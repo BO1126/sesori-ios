@@ -29,6 +29,8 @@
 		42916065264BBE480072A2CF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 42916063264BBE480072A2CF /* LaunchScreen.storyboard */; };
 		42A268E026887D0C009A5BCC /* LunchCustomView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 42A268DF26887D0C009A5BCC /* LunchCustomView.xib */; };
 		42A268E226887D55009A5BCC /* LunchCustomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42A268E126887D55009A5BCC /* LunchCustomView.swift */; };
+		42BA62EF26EE09BB00A883A1 /* CalendarCustomView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 42BA62EE26EE09BB00A883A1 /* CalendarCustomView.xib */; };
+		42BA62F126EE09EF00A883A1 /* CalendarCustomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42BA62F026EE09EF00A883A1 /* CalendarCustomView.swift */; };
 		8619B80121CB1935D322CD20 /* Pods_sesori.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9912C9BAFB20E5A7FBDF82AE /* Pods_sesori.framework */; };
 /* End PBXBuildFile section */
 
@@ -57,6 +59,8 @@
 		42916066264BBE480072A2CF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		42A268DF26887D0C009A5BCC /* LunchCustomView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LunchCustomView.xib; sourceTree = "<group>"; };
 		42A268E126887D55009A5BCC /* LunchCustomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LunchCustomView.swift; sourceTree = "<group>"; };
+		42BA62EE26EE09BB00A883A1 /* CalendarCustomView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CalendarCustomView.xib; sourceTree = "<group>"; };
+		42BA62F026EE09EF00A883A1 /* CalendarCustomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarCustomView.swift; sourceTree = "<group>"; };
 		9912C9BAFB20E5A7FBDF82AE /* Pods_sesori.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_sesori.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AF0AFAF0D524CD25CFCE4065 /* Pods-sesori.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-sesori.debug.xcconfig"; path = "Target Support Files/Pods-sesori/Pods-sesori.debug.xcconfig"; sourceTree = "<group>"; };
 		C51E7213880FA32F957EC244 /* Pods-sesori.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-sesori.release.xcconfig"; path = "Target Support Files/Pods-sesori/Pods-sesori.release.xcconfig"; sourceTree = "<group>"; };
@@ -95,6 +99,7 @@
 		42916057264BBE470072A2CF /* sesori */ = {
 			isa = PBXGroup;
 			children = (
+				42BA62ED26EE095600A883A1 /* CustomView */,
 				42916061264BBE480072A2CF /* Assets.xcassets */,
 				42916058264BBE470072A2CF /* AppDelegate.swift */,
 				4291605A264BBE470072A2CF /* SceneDelegate.swift */,
@@ -109,10 +114,6 @@
 				427527692676E01C008A37E1 /* TimeCollectionViewCell.swift */,
 				42805502268014EC00693A54 /* BoardCollectionViewCell.swift */,
 				42805504268015B400693A54 /* BoardViewController.swift */,
-				42A268DF26887D0C009A5BCC /* LunchCustomView.xib */,
-				42A268E126887D55009A5BCC /* LunchCustomView.swift */,
-				428341D3268ABD530068C044 /* TimetableCustomView.xib */,
-				428341D5268ABD820068C044 /* TimetableCustomView.swift */,
 				427B4B6226AADD3000571EC1 /* SettingViewController.swift */,
 				422D416026B42A1A000EB239 /* CalendarViewController.swift */,
 				424D1F4026C4E20F009A13F4 /* LoginViewController.swift */,
@@ -120,6 +121,19 @@
 				424D1F4426C4EC23009A13F4 /* RegisterViewController.swift */,
 			);
 			path = sesori;
+			sourceTree = "<group>";
+		};
+		42BA62ED26EE095600A883A1 /* CustomView */ = {
+			isa = PBXGroup;
+			children = (
+				42A268DF26887D0C009A5BCC /* LunchCustomView.xib */,
+				42A268E126887D55009A5BCC /* LunchCustomView.swift */,
+				428341D3268ABD530068C044 /* TimetableCustomView.xib */,
+				428341D5268ABD820068C044 /* TimetableCustomView.swift */,
+				42BA62EE26EE09BB00A883A1 /* CalendarCustomView.xib */,
+				42BA62F026EE09EF00A883A1 /* CalendarCustomView.swift */,
+			);
+			path = CustomView;
 			sourceTree = "<group>";
 		};
 		497FE9F39691541764A61ABC /* Pods */ = {
@@ -199,6 +213,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				42916065264BBE480072A2CF /* LaunchScreen.storyboard in Resources */,
+				42BA62EF26EE09BB00A883A1 /* CalendarCustomView.xib in Resources */,
 				428341D4268ABD530068C044 /* TimetableCustomView.xib in Resources */,
 				42916062264BBE480072A2CF /* Assets.xcassets in Resources */,
 				42916060264BBE470072A2CF /* Main.storyboard in Resources */,
@@ -268,6 +283,7 @@
 				4275276A2676E01C008A37E1 /* TimeCollectionViewCell.swift in Sources */,
 				4291605B264BBE470072A2CF /* SceneDelegate.swift in Sources */,
 				428341D6268ABD820068C044 /* TimetableCustomView.swift in Sources */,
+				42BA62F126EE09EF00A883A1 /* CalendarCustomView.swift in Sources */,
 				424D1F4526C4EC23009A13F4 /* RegisterViewController.swift in Sources */,
 				42763C36265F559C000CC746 /* ContainerTableViewController.swift in Sources */,
 				422D416126B42A1A000EB239 /* CalendarViewController.swift in Sources */,

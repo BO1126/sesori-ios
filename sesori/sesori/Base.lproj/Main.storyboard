@@ -32,7 +32,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <segue destination="DdX-El-3j6" kind="modal" modalPresentationStyle="fullScreen" id="n7t-v5-P7d"/>
+                                    <segue destination="DdX-El-3j6" kind="modal" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="n7t-v5-P7d"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LKl-jm-vhw">
@@ -497,7 +497,7 @@
         <!--Calendar View Controller-->
         <scene sceneID="jOF-3c-WUO">
             <objects>
-                <viewController id="ehs-kl-epz" customClass="CalendarViewController" customModule="sesori" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Calendar_yw" id="ehs-kl-epz" customClass="CalendarViewController" customModule="sesori" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="J7x-f6-IQF"/>
                         <viewControllerLayoutGuide type="bottom" id="AhB-wH-Uov"/>
@@ -686,67 +686,63 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QNM-SO-tD0">
-                                <rect key="frame" x="92" y="588" width="70" height="36"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <state key="normal" title="학사일정"/>
-                                <connections>
-                                    <segue destination="ehs-kl-epz" kind="presentation" modalPresentationStyle="fullScreen" id="21Y-wp-Ibn"/>
-                                </connections>
-                            </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Sbg-2L-X8B" customClass="LunchCustomView" customModule="sesori" customModuleProvider="target">
-                                <rect key="frame" x="45" y="367" width="150" height="150"/>
+                                <rect key="frame" x="45" y="360" width="150" height="150"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="150" id="REM-C8-HfP"/>
                                     <constraint firstAttribute="height" constant="150" id="q8k-CV-NJt"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BZe-oy-Pbn" customClass="TimetableCustomView" customModule="sesori" customModuleProvider="target">
-                                <rect key="frame" x="219" y="367" width="150" height="150"/>
+                                <rect key="frame" x="219" y="360" width="150" height="150"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="150" id="QVu-cG-UlG"/>
                                     <constraint firstAttribute="height" constant="150" id="zfQ-4Q-vBv"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PIi-sy-qwV">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="327"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="320"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="BN0-R4-cS9">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="202"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="이정우 학생," textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fmA-WA-DNC">
-                                                <rect key="frame" x="37" y="113" width="192" height="48"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="40"/>
-                                                <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="환영해요!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wmx-qu-OcM">
-                                                <rect key="frame" x="237" y="127" width="95" height="30"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
-                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                        </subviews>
-                                        <color key="backgroundColor" name="SubColor"/>
-                                    </view>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="이정우 학생," textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fmA-WA-DNC">
+                                        <rect key="frame" x="30" y="132" width="192" height="48"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="40"/>
+                                        <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="환영해요!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wmx-qu-OcM">
+                                        <rect key="frame" x="232" y="150" width="95" height="30"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
                                 <color key="backgroundColor" name="MainColor"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="327" id="TKK-P0-gW7"/>
+                                    <constraint firstItem="Wmx-qu-OcM" firstAttribute="leading" secondItem="fmA-WA-DNC" secondAttribute="trailing" constant="10" id="IfB-Bp-mXM"/>
+                                    <constraint firstAttribute="bottom" secondItem="fmA-WA-DNC" secondAttribute="bottom" constant="140" id="QIQ-L3-Tui"/>
+                                    <constraint firstItem="fmA-WA-DNC" firstAttribute="leading" secondItem="PIi-sy-qwV" secondAttribute="leading" constant="30" id="Rj0-Oh-NXp"/>
+                                    <constraint firstAttribute="height" constant="320" id="TKK-P0-gW7"/>
                                     <constraint firstAttribute="width" constant="414" id="VVT-xt-efF"/>
+                                    <constraint firstAttribute="bottom" secondItem="Wmx-qu-OcM" secondAttribute="bottom" constant="140" id="bbd-Fh-0fP"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7X7-mF-uiE" customClass="CalendarCustomView" customModule="sesori" customModuleProvider="target">
+                                <rect key="frame" x="45" y="563" width="150" height="150"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="150" id="2aO-60-Gll"/>
+                                    <constraint firstAttribute="height" constant="150" id="RrK-RX-Zax"/>
                                 </constraints>
                             </view>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="PIi-sy-qwV" firstAttribute="top" secondItem="8Ni-3l-YUL" secondAttribute="top" id="3jA-Aj-Evr"/>
+                            <constraint firstItem="48W-tr-tss" firstAttribute="top" secondItem="7X7-mF-uiE" secondAttribute="bottom" constant="100" id="KeI-Md-gNg"/>
                             <constraint firstItem="BZe-oy-Pbn" firstAttribute="top" secondItem="PIi-sy-qwV" secondAttribute="bottom" constant="40" id="MnN-ki-lHv"/>
                             <constraint firstAttribute="trailingMargin" secondItem="BZe-oy-Pbn" secondAttribute="trailing" constant="25" id="fPt-eO-kpF"/>
                             <constraint firstItem="Sbg-2L-X8B" firstAttribute="top" secondItem="PIi-sy-qwV" secondAttribute="bottom" constant="40" id="gNo-c0-r2K"/>
+                            <constraint firstItem="7X7-mF-uiE" firstAttribute="leading" secondItem="8Ni-3l-YUL" secondAttribute="leadingMargin" constant="25" id="jQk-xS-kVQ"/>
                             <constraint firstAttribute="trailing" secondItem="PIi-sy-qwV" secondAttribute="trailing" id="ttS-6n-8gs"/>
                             <constraint firstItem="Sbg-2L-X8B" firstAttribute="leading" secondItem="8Ni-3l-YUL" secondAttribute="leadingMargin" constant="25" id="va0-WE-0rf"/>
                             <constraint firstItem="PIi-sy-qwV" firstAttribute="leading" secondItem="8Ni-3l-YUL" secondAttribute="leading" id="y9h-69-okx"/>
@@ -756,11 +752,11 @@
                         <inset key="imageInsets" minX="23" minY="23" maxX="23" maxY="23"/>
                     </tabBarItem>
                     <connections>
+                        <outlet property="calendarView" destination="7X7-mF-uiE" id="FJp-gL-Qvm"/>
                         <outlet property="lunchView" destination="Sbg-2L-X8B" id="Uce-S5-PzG"/>
                         <outlet property="studentLabel" destination="fmA-WA-DNC" id="Ila-63-6GV"/>
-                        <outlet property="studentView" destination="BN0-R4-cS9" id="bjF-Fy-9CL"/>
+                        <outlet property="studentView" destination="PIi-sy-qwV" id="9UD-eh-BTE"/>
                         <outlet property="timetableView" destination="BZe-oy-Pbn" id="OFb-Gs-Ztx"/>
-                        <outlet property="todayView" destination="PIi-sy-qwV" id="2DH-sQ-giI"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PxD-3E-afe" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -908,8 +904,8 @@
     <resources>
         <image name="_b" width="72" height="68"/>
         <image name="_bb" width="71" height="68"/>
-        <image name="arrow.left" width="512" height="512"/>
         <image name="arrow.left" catalog="system" width="128" height="98"/>
+        <image name="arrow.left" width="512" height="512"/>
         <image name="arrow.right" width="512" height="512"/>
         <image name="camera" width="512" height="512"/>
         <image name="home" width="87" height="71"/>

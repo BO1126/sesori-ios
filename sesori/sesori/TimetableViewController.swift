@@ -7,6 +7,7 @@
 
 import UIKit
 import Alamofire
+import SwiftyJSON
 
 class TimetableViewController : UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
     
@@ -53,12 +54,17 @@ class TimetableViewController : UIViewController, UICollectionViewDataSource, UI
         AF.request(url,
                    method: .get).responseJSON{
                     response in
-                    let decoder = JSONDecoder()
-                    let timetable = try? decoder.decode(Timetable.self, from: response.data!)
-                    
-                    let timetableData = "\(String(describing: timetable))"
-                    self.timelist = self.convertTimetableText(timetableData: timetableData)
-                    self.collectionview.reloadData()
+                    let json = JSON(response.data)
+                    let timetable = json["hisTimetable"].arrayValue[1]
+                    let row = timetable["row"]
+                    var contentArr = Array<String>()
+                    print(row)
+//                    let decoder = JSONDecoder()
+//                    let timetable = try? decoder.decode(Timetable.self, from: response.data!)
+//
+//                    let timetableData = "\(String(describing: timetable))"
+//                    self.timelist = self.convertTimetableText(timetableData: timetableData)
+//                    self.collectionview.reloadData()
             }
     }
     

@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CalendarCustomView" customModule="sesori" customModuleProvider="target">
+            <connections>
+                <outlet property="cornerView" destination="I7g-Lv-ImE" id="yTJ-Tt-mE4"/>
+                <outlet property="customView" destination="f92-e0-isj" id="xYz-br-dgF"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="f92-e0-isj">
+            <rect key="frame" x="0.0" y="0.0" width="150" height="150"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="학사일정" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="an5-XO-uq7">
+                    <rect key="frame" x="42" y="85.5" width="66" height="23"/>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="19"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="이번달 학사일정 확인" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mAG-DF-9Ty">
+                    <rect key="frame" x="25" y="115.5" width="100.5" height="14.5"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                    <color key="textColor" red="0.64705882349999999" green="0.64705882349999999" blue="0.64705882349999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="I7g-Lv-ImE">
+                    <rect key="frame" x="42.5" y="12" width="65" height="65"/>
+                    <subviews>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="시간표" translatesAutoresizingMaskIntoConstraints="NO" id="F6y-na-GRf">
+                            <rect key="frame" x="15" y="15" width="35" height="35"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="35" id="5wY-mj-tys"/>
+                                <constraint firstAttribute="height" constant="35" id="TN1-xA-khC"/>
+                            </constraints>
+                        </imageView>
+                    </subviews>
+                    <color key="backgroundColor" name="MainColor"/>
+                    <constraints>
+                        <constraint firstItem="F6y-na-GRf" firstAttribute="centerX" secondItem="I7g-Lv-ImE" secondAttribute="centerX" id="1GS-f6-MqP"/>
+                        <constraint firstAttribute="width" constant="65" id="4e1-Xy-nfK"/>
+                        <constraint firstItem="F6y-na-GRf" firstAttribute="centerY" secondItem="I7g-Lv-ImE" secondAttribute="centerY" id="9xm-Y3-u95"/>
+                        <constraint firstAttribute="height" constant="65" id="WNI-sy-xkE"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="p0c-Qd-ypM"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="I7g-Lv-ImE" firstAttribute="top" secondItem="f92-e0-isj" secondAttribute="top" constant="12" id="7sl-Wm-9OV"/>
+                <constraint firstItem="I7g-Lv-ImE" firstAttribute="centerX" secondItem="f92-e0-isj" secondAttribute="centerX" id="A6K-65-3Nl"/>
+                <constraint firstItem="mAG-DF-9Ty" firstAttribute="top" secondItem="an5-XO-uq7" secondAttribute="bottom" constant="7" id="MIo-lZ-oJL"/>
+                <constraint firstItem="an5-XO-uq7" firstAttribute="top" secondItem="I7g-Lv-ImE" secondAttribute="bottom" constant="8.5" id="Qvi-Ms-ZtU"/>
+                <constraint firstItem="an5-XO-uq7" firstAttribute="centerX" secondItem="f92-e0-isj" secondAttribute="centerX" id="Vzg-Df-NcE"/>
+                <constraint firstAttribute="bottom" secondItem="mAG-DF-9Ty" secondAttribute="bottom" constant="20" id="lA8-6Q-BY9"/>
+                <constraint firstItem="mAG-DF-9Ty" firstAttribute="centerX" secondItem="f92-e0-isj" secondAttribute="centerX" id="r4o-CZ-q6R"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="140.57971014492756" y="41.517857142857139"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="시간표" width="95" height="95"/>
+        <namedColor name="MainColor">
+            <color red="0.40799996256828308" green="0.70599997043609619" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

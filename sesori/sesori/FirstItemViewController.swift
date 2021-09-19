@@ -9,10 +9,10 @@ import UIKit
 
 class FirstItemViewController : UIViewController {
     @IBOutlet weak var studentView : UIView!
-    @IBOutlet weak var todayView : UIView!
     @IBOutlet weak var lunchView : UIView!
     @IBOutlet weak var timetableView : UIView!
     @IBOutlet weak var studentLabel : UILabel!
+    @IBOutlet weak var calendarView : UIView!
     
     let userData : Array<Any> = ["이정우",6,20]
     
@@ -20,21 +20,19 @@ class FirstItemViewController : UIViewController {
         studentView?.layer.cornerRadius = 40
         studentView?.layer.maskedCorners = [.layerMaxXMaxYCorner, .layerMinXMaxYCorner]
         
-        todayView.layer.cornerRadius = 40
-        todayView.layer.maskedCorners = [.layerMaxXMaxYCorner, .layerMinXMaxYCorner]
         
-        
-        let lunchGesture = UITapGestureRecognizer(target: self, action: #selector(self.goLunchPage(sender:)))
-        let timetableGesture = UITapGestureRecognizer(target: self, action: #selector(self.goTimetablePage(sender:)))
+        let lunchGesture = UITapGestureRecognizer(target: self, action: #selector(self.showLunchPage(sender:)))
+        let timetableGesture = UITapGestureRecognizer(target: self, action: #selector(self.showTimetablePage(sender:)))
+        let calendarGesture = UITapGestureRecognizer(target: self, action: #selector(self.showCalendarPage(sender:)))
         
         self.lunchView.addGestureRecognizer(lunchGesture)
         self.timetableView.addGestureRecognizer(timetableGesture)
-        
+        self.calendarView.addGestureRecognizer(calendarGesture)
 //        studentLabel.text = "\(userData[0]) 학생,"
 
     }
     
-    @objc func goLunchPage(sender:UIGestureRecognizer){
+    @objc func showLunchPage(sender:UIGestureRecognizer){
             
         let storyboard  = UIStoryboard(name: "Main", bundle: nil)
         let vc = storyboard.instantiateViewController(withIdentifier: "Lunch_yw")
@@ -45,10 +43,21 @@ class FirstItemViewController : UIViewController {
         self.present(vc, animated: true)
         }
     
-    @objc func goTimetablePage(sender:UIGestureRecognizer){
+    @objc func showTimetablePage(sender:UIGestureRecognizer){
             
         let storyboard  = UIStoryboard(name: "Main", bundle: nil)
         let vc = storyboard.instantiateViewController(withIdentifier: "Timetable_yw")
+            
+        vc.modalPresentationStyle = .fullScreen
+        vc.modalTransitionStyle = UIModalTransitionStyle.coverVertical
+                
+        self.present(vc, animated: true)
+        }
+    
+    @objc func showCalendarPage(sender:UIGestureRecognizer){
+            
+        let storyboard  = UIStoryboard(name: "Main", bundle: nil)
+        let vc = storyboard.instantiateViewController(withIdentifier: "Calendar_yw")
             
         vc.modalPresentationStyle = .fullScreen
         vc.modalTransitionStyle = UIModalTransitionStyle.coverVertical
