@@ -28,12 +28,12 @@ class TimetableViewController : UIViewController, UICollectionViewDataSource, UI
         let flowlayout : UICollectionViewFlowLayout = UICollectionViewFlowLayout()
         
         flowlayout.scrollDirection = .horizontal
-        flowlayout.sectionInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
+        flowlayout.sectionInset = UIEdgeInsets(top: 10, left: 0, bottom: 10, right: 0)
         
         flowlayout.minimumInteritemSpacing = 0
-        flowlayout.minimumLineSpacing = 0
+        flowlayout.minimumLineSpacing = 5
         
-        let cellWidthSize = collectionview.bounds.size.width / 5.4
+        let cellWidthSize = collectionview.bounds.size.width / 6
         let cellHeightSize = collectionview.bounds.size.height / 8
         
         flowlayout.itemSize = CGSize(width: cellWidthSize, height: cellHeightSize)
@@ -55,53 +55,18 @@ class TimetableViewController : UIViewController, UICollectionViewDataSource, UI
                    method: .get).responseJSON{
                     response in
                     let json = JSON(response.data)
-                    let timetable = json["hisTimetable"].arrayValue[1]
-                    let row = timetable["row"]
-                    var contentArr = Array<String>()
-                    print(row)
-//                    let decoder = JSONDecoder()
-//                    let timetable = try? decoder.decode(Timetable.self, from: response.data!)
-//
-//                    let timetableData = "\(String(describing: timetable))"
-//                    self.timelist = self.convertTimetableText(timetableData: timetableData)
-//                    self.collectionview.reloadData()
+                    let jTimetable = json["hisTimetable"].arrayValue[1]
+                    let row = jTimetable["row"]
+                    
+                    if let arr = row.array{
+                        for i in 0..<arr.count {
+                            self.timelist.append(arr[i]["ITRT_CNTNT"].stringValue)
+                            // arr[i] = arr[i].replacingOccurrences(of: "* ", with: "")
+                        }
+                    }
+                    self.collectionview.reloadData()
             }
     }
-    
-    func convertTimetableText(timetableData : String) -> Array<String>{
-        var timetableList = Array<String>()
-        var li = Array<String>()
-        
-        let converter = timetableData
-        let arr = converter.components(separatedBy: "\"")
-        
-        var i = 0
-        
-        while true {
-            i+=1
-            if i%2==1 {
-                timetableList.append(arr[i])
-                if (arr.count - 2) <= i {
-                    break
-                }
-            }
-        }
-        var j=0
-        while true {
-            j+=1
-            if j%2==1 {
-                timetableList[j] = timetableList[j].replacingOccurrences(of: "* ", with: "")
-                li.append(timetableList[j])
-                if (timetableList.count-1) <= j {
-                    break
-                }
-            }
-        }
-        
-        return li
-    }
-    
-    
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return timelist.count
@@ -112,8 +77,7 @@ class TimetableViewController : UIViewController, UICollectionViewDataSource, UI
         
         cell.timeLabel.text = timelist[indexPath.row]
         
-        cell.layer.borderWidth = 1
-        cell.layer.borderColor = UIColor.lightGray.cgColor
+        
         
         return cell
     }
@@ -163,51 +127,8 @@ class TimetableViewController : UIViewController, UICollectionViewDataSource, UI
         self.nextFridayDate = formatter.string(from: nextFriday!)
     }
     
-    func setNextTimetableData(){
-        let url = "https://open.neis.go.kr/hub/hisTimetable?Type=json&pIndex=1&pSize=100&ATPT_OFCDC_SC_CODE=B10&SD_SCHUL_CODE=7010537&KEY=406a6783d8db4d5483fd44abf25d720f&GRADE=3&CLASS_NM=6&TI_FROM_YMD="+self.nextMondayDate+"&TI_TO_YMD="+self.nextFridayDate
-        
-        AF.request(url,
-                   method: .get).responseJSON{
-                    response in
-                    let decoder = JSONDecoder()
-                    let timetable = try? decoder.decode(Timetable.self, from: response.data!)
-                    
-                    let timetableData = "\(String(describing: timetable))"
-                    self.timelist = self.convertTimetableText(timetableData: timetableData)
-                    self.collectionview.reloadData()
-            }
-    }
-    
     @IBAction func dismissView(){
         dismiss(animated: true)
-    }
-    
-    @IBAction func touchNextWeekButton(){
-        makeNextWeek()
-        self.setNextTimetableData()
-    }
-    
-    
-    
-    // MARK: - decode
-    struct Timetable: Codable {
-        let hisTimetable: [HisTimetable]
-    }
-    
-    
-    struct HisTimetable: Codable {
-        let row: [Row]?
-    }
-    
-    
-    struct Row: Codable {
-        let perio: String
-        let itrtCntnt: String
-        
-        enum CodingKeys: String, CodingKey {
-            case perio = "PERIO"
-            case itrtCntnt = "ITRT_CNTNT"
-        }
     }
     
 }

@@ -24,10 +24,25 @@ class RegisterViewController : UIViewController {
         
         checkButton.setAttributedTitle(checkButtonAttrubutesString, for: .normal)
         
+        let readerGesture = UITapGestureRecognizer(target: self, action: #selector(self.showReaderPage(sender:)))
+        
+        self.pictureView.addGestureRecognizer(readerGesture)
+        
     }
     
     @IBAction func dismissView(){
         dismiss(animated: true)
     }
+    
+    @objc func showReaderPage(sender:UIGestureRecognizer){
+            
+        let storyboard  = UIStoryboard(name: "Main", bundle: nil)
+        let vc = storyboard.instantiateViewController(withIdentifier: "Reader_yw")
+            
+        vc.modalPresentationStyle = .fullScreen
+        vc.modalTransitionStyle = UIModalTransitionStyle.coverVertical
+                
+        self.present(vc, animated: true)
+        }
     
 }

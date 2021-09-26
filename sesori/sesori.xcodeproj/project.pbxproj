@@ -31,6 +31,7 @@
 		42A268E226887D55009A5BCC /* LunchCustomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42A268E126887D55009A5BCC /* LunchCustomView.swift */; };
 		42BA62EF26EE09BB00A883A1 /* CalendarCustomView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 42BA62EE26EE09BB00A883A1 /* CalendarCustomView.xib */; };
 		42BA62F126EE09EF00A883A1 /* CalendarCustomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42BA62F026EE09EF00A883A1 /* CalendarCustomView.swift */; };
+		42BA62F326F70C8C00A883A1 /* ReaderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42BA62F226F70C8C00A883A1 /* ReaderViewController.swift */; };
 		8619B80121CB1935D322CD20 /* Pods_sesori.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9912C9BAFB20E5A7FBDF82AE /* Pods_sesori.framework */; };
 /* End PBXBuildFile section */
 
@@ -61,6 +62,7 @@
 		42A268E126887D55009A5BCC /* LunchCustomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LunchCustomView.swift; sourceTree = "<group>"; };
 		42BA62EE26EE09BB00A883A1 /* CalendarCustomView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CalendarCustomView.xib; sourceTree = "<group>"; };
 		42BA62F026EE09EF00A883A1 /* CalendarCustomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarCustomView.swift; sourceTree = "<group>"; };
+		42BA62F226F70C8C00A883A1 /* ReaderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReaderViewController.swift; sourceTree = "<group>"; };
 		9912C9BAFB20E5A7FBDF82AE /* Pods_sesori.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_sesori.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AF0AFAF0D524CD25CFCE4065 /* Pods-sesori.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-sesori.debug.xcconfig"; path = "Target Support Files/Pods-sesori/Pods-sesori.debug.xcconfig"; sourceTree = "<group>"; };
 		C51E7213880FA32F957EC244 /* Pods-sesori.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-sesori.release.xcconfig"; path = "Target Support Files/Pods-sesori/Pods-sesori.release.xcconfig"; sourceTree = "<group>"; };
@@ -101,12 +103,12 @@
 			children = (
 				42BA62ED26EE095600A883A1 /* CustomView */,
 				42916061264BBE480072A2CF /* Assets.xcassets */,
+				42916066264BBE480072A2CF /* Info.plist */,
 				42916058264BBE470072A2CF /* AppDelegate.swift */,
 				4291605A264BBE470072A2CF /* SceneDelegate.swift */,
 				4291605C264BBE470072A2CF /* ViewController.swift */,
 				4291605E264BBE470072A2CF /* Main.storyboard */,
 				42916063264BBE480072A2CF /* LaunchScreen.storyboard */,
-				42916066264BBE480072A2CF /* Info.plist */,
 				428CB052265425AD002CAFE9 /* FirstItemViewController.swift */,
 				428CB0542654268E002CAFE9 /* LunchViewController.swift */,
 				426C3E8326577CC100672FF6 /* TimetableViewController.swift */,
@@ -119,6 +121,7 @@
 				424D1F4026C4E20F009A13F4 /* LoginViewController.swift */,
 				424D1F4226C4E30D009A13F4 /* CustomRoundButton.swift */,
 				424D1F4426C4EC23009A13F4 /* RegisterViewController.swift */,
+				42BA62F226F70C8C00A883A1 /* ReaderViewController.swift */,
 			);
 			path = sesori;
 			sourceTree = "<group>";
@@ -277,6 +280,7 @@
 				424D1F4126C4E20F009A13F4 /* LoginViewController.swift in Sources */,
 				427B4B6326AADD3000571EC1 /* SettingViewController.swift in Sources */,
 				42A268E226887D55009A5BCC /* LunchCustomView.swift in Sources */,
+				42BA62F326F70C8C00A883A1 /* ReaderViewController.swift in Sources */,
 				42916059264BBE470072A2CF /* AppDelegate.swift in Sources */,
 				428CB053265425AD002CAFE9 /* FirstItemViewController.swift in Sources */,
 				426C3E8426577CC100672FF6 /* TimetableViewController.swift in Sources */,
