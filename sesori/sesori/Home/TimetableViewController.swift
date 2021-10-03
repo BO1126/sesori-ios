@@ -61,7 +61,7 @@ class TimetableViewController : UIViewController, UICollectionViewDataSource, UI
                     if let arr = row.array{
                         for i in 0..<arr.count {
                             self.timelist.append(arr[i]["ITRT_CNTNT"].stringValue)
-                            // arr[i] = arr[i].replacingOccurrences(of: "* ", with: "")
+                            self.timelist[i] = self.timelist[i].replacingOccurrences(of: "* ", with: "")
                         }
                     }
                     self.collectionview.reloadData()

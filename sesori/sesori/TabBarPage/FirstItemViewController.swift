@@ -13,6 +13,7 @@ class FirstItemViewController : UIViewController {
     @IBOutlet weak var timetableView : UIView!
     @IBOutlet weak var studentLabel : UILabel!
     @IBOutlet weak var calendarView : UIView!
+    @IBOutlet weak var mainView : UIView!
     
     let userData : Array<Any> = ["이정우",6,20]
     
@@ -28,6 +29,10 @@ class FirstItemViewController : UIViewController {
         self.lunchView.addGestureRecognizer(lunchGesture)
         self.timetableView.addGestureRecognizer(timetableGesture)
         self.calendarView.addGestureRecognizer(calendarGesture)
+        
+        mainView.layer.cornerRadius = 50
+        mainView.layer.masksToBounds = true
+        mainView.layer.maskedCorners = [.layerMinXMaxYCorner, .layerMaxXMaxYCorner]
 //        studentLabel.text = "\(userData[0]) 학생,"
 
     }

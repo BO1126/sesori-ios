@@ -9,7 +9,9 @@ import UIKit
 
 class BoardViewController : UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
     @IBOutlet weak var collectionview : UICollectionView!
-    let topTabbar = ["공지사항","익명 커뮤니티"]
+    @IBOutlet weak var mainView : UIView!
+    
+    let topTabbar = ["전체","공지","기타"]
     
     override func viewDidLoad() {
         let flowlayout = UICollectionViewFlowLayout()
@@ -24,6 +26,9 @@ class BoardViewController : UIViewController, UICollectionViewDataSource, UIColl
         
         collectionview.delegate = self
         collectionview.dataSource = self
+        mainView.layer.cornerRadius = 50
+        mainView.layer.masksToBounds = true
+        mainView.layer.maskedCorners = [.layerMinXMaxYCorner, .layerMaxXMaxYCorner]
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
