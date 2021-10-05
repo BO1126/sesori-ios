@@ -365,13 +365,10 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DlW-pG-jGq">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="813"/>
                                 <subviews>
-                                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="QwE-Eq-xWN">
-                                        <rect key="frame" x="0.0" y="50" width="414" height="42"/>
+                                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="QwE-Eq-xWN">
+                                        <rect key="frame" x="0.0" y="158" width="414" height="42"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="42" id="LVx-jY-tvL"/>
-                                            <constraint firstAttribute="width" constant="414" id="PEy-l5-NLV"/>
-                                        </constraints>
                                         <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="xDq-sE-jkc">
                                             <size key="itemSize" width="200" height="30"/>
                                             <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -404,21 +401,23 @@
                                             </collectionViewCell>
                                         </cells>
                                     </collectionView>
-                                    <tabBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="K4H-Vj-Z3a">
-                                        <rect key="frame" x="0.0" y="241" width="414" height="49"/>
-                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
-                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <items>
-                                            <tabBarItem systemItem="favorites" id="5Bs-xA-PEk"/>
-                                            <tabBarItem systemItem="more" id="Crv-nR-lwh"/>
-                                        </items>
-                                    </tabBar>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="게시판" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uzv-NG-3Gb">
+                                        <rect key="frame" x="155" y="60" width="104" height="48"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="40"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K8r-CU-n0f">
+                                        <rect key="frame" x="295" y="44" width="93" height="83"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" image="자악성"/>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
-                                    <constraint firstItem="QwE-Eq-xWN" firstAttribute="top" secondItem="DlW-pG-jGq" secondAttribute="top" constant="50" id="QCo-nl-RvW"/>
-                                    <constraint firstAttribute="trailing" secondItem="QwE-Eq-xWN" secondAttribute="trailing" id="mDy-bT-6pI"/>
-                                    <constraint firstItem="QwE-Eq-xWN" firstAttribute="leading" secondItem="DlW-pG-jGq" secondAttribute="leading" id="phh-Ga-mR2"/>
+                                    <constraint firstItem="Uzv-NG-3Gb" firstAttribute="top" secondItem="DlW-pG-jGq" secondAttribute="top" constant="60" id="4t3-e1-WhH"/>
+                                    <constraint firstItem="Uzv-NG-3Gb" firstAttribute="centerX" secondItem="DlW-pG-jGq" secondAttribute="centerX" id="DLd-1y-h61"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -441,6 +440,24 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="exO-Tc-zgw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1805.7971014492755" y="466.74107142857139"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="45h-py-ZIa">
+            <objects>
+                <viewController id="Ctz-UY-mhK" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="fJd-DC-c51"/>
+                        <viewControllerLayoutGuide type="bottom" id="aws-r7-U8y"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="KZ3-fn-r8t">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Dqe-DY-KgC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2630" y="467"/>
         </scene>
         <!--Timetable View Controller-->
         <scene sceneID="3q4-Vp-uSI">
@@ -485,7 +502,7 @@
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cell" id="ias-gc-gMS" customClass="TimeCollectionViewCell" customModule="sesori" customModuleProvider="target">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cell" id="ias-gc-gMS" customClass="TimetableCollectionViewCell" customModule="sesori" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="JaL-aO-rwv">
@@ -509,7 +526,7 @@
                                         </collectionViewCellContentView>
                                         <color key="backgroundColor" white="0.91477997448979587" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <connections>
-                                            <outlet property="timeLabel" destination="Nfw-KZ-DbK" id="xqK-Yi-nLf"/>
+                                            <outlet property="cellLabel" destination="Nfw-KZ-DbK" id="L9b-bF-XmW"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
@@ -1068,6 +1085,7 @@
         <image name="독수리" width="611" height="540"/>
         <image name="설정1" width="76" height="76"/>
         <image name="세소리 타이틀 2" width="129" height="68"/>
+        <image name="자악성" width="69" height="69"/>
         <namedColor name="AccentColor">
             <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

@@ -73,9 +73,9 @@ class TimetableViewController : UIViewController, UICollectionViewDataSource, UI
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as! TimeCollectionViewCell
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as! TimetableCollectionViewCell
         
-        cell.timeLabel.text = timelist[indexPath.row]
+        cell.cellLabel.text = timelist[indexPath.row]
         
         
         
