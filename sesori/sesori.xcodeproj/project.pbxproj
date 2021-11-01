@@ -7,12 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		420AFE6B2712C41D00F031D7 /* BoardContentsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 420AFE6A2712C41D00F031D7 /* BoardContentsCollectionViewCell.swift */; };
 		422D416126B42A1A000EB239 /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 422D416026B42A1A000EB239 /* CalendarViewController.swift */; };
 		424D1F4126C4E20F009A13F4 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 424D1F4026C4E20F009A13F4 /* LoginViewController.swift */; };
 		424D1F4526C4EC23009A13F4 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 424D1F4426C4EC23009A13F4 /* RegisterViewController.swift */; };
 		426C3E8426577CC100672FF6 /* TimetableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 426C3E8326577CC100672FF6 /* TimetableViewController.swift */; };
 		427B4B6326AADD3000571EC1 /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 427B4B6226AADD3000571EC1 /* SettingViewController.swift */; };
-		42805503268014EC00693A54 /* BoardCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42805502268014EC00693A54 /* BoardCollectionViewCell.swift */; };
 		42805505268015B400693A54 /* BoardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42805504268015B400693A54 /* BoardViewController.swift */; };
 		428341D4268ABD530068C044 /* TimetableCustomView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 428341D3268ABD530068C044 /* TimetableCustomView.xib */; };
 		428341D6268ABD820068C044 /* TimetableCustomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 428341D5268ABD820068C044 /* TimetableCustomView.swift */; };
@@ -20,13 +20,16 @@
 		428CB0552654268E002CAFE9 /* LunchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 428CB0542654268E002CAFE9 /* LunchViewController.swift */; };
 		42916059264BBE470072A2CF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42916058264BBE470072A2CF /* AppDelegate.swift */; };
 		4291605B264BBE470072A2CF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4291605A264BBE470072A2CF /* SceneDelegate.swift */; };
-		4291605D264BBE470072A2CF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4291605C264BBE470072A2CF /* ViewController.swift */; };
 		42916060264BBE470072A2CF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4291605E264BBE470072A2CF /* Main.storyboard */; };
 		42916062264BBE480072A2CF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 42916061264BBE480072A2CF /* Assets.xcassets */; };
 		42916065264BBE480072A2CF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 42916063264BBE480072A2CF /* LaunchScreen.storyboard */; };
 		42A268E026887D0C009A5BCC /* LunchCustomView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 42A268DF26887D0C009A5BCC /* LunchCustomView.xib */; };
 		42A268E226887D55009A5BCC /* LunchCustomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42A268E126887D55009A5BCC /* LunchCustomView.swift */; };
 		42AD5CBF2703DFCE00DD2250 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42AD5CBE2703DFCE00DD2250 /* TabBarViewController.swift */; };
+		42B565FD271F8D59003AF931 /* BoardTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B565FC271F8D59003AF931 /* BoardTabViewController.swift */; };
+		42B565FF271F902F003AF931 /* BoardTab1ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B565FE271F902F003AF931 /* BoardTab1ViewController.swift */; };
+		42B56601271F903D003AF931 /* BoardTab2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B56600271F903D003AF931 /* BoardTab2ViewController.swift */; };
+		42B56603271F9048003AF931 /* BoardTab3ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B56602271F9048003AF931 /* BoardTab3ViewController.swift */; };
 		42BA62EF26EE09BB00A883A1 /* CalendarCustomView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 42BA62EE26EE09BB00A883A1 /* CalendarCustomView.xib */; };
 		42BA62F126EE09EF00A883A1 /* CalendarCustomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42BA62F026EE09EF00A883A1 /* CalendarCustomView.swift */; };
 		42BA62F326F70C8C00A883A1 /* ReaderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42BA62F226F70C8C00A883A1 /* ReaderViewController.swift */; };
@@ -36,12 +39,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		420AFE6A2712C41D00F031D7 /* BoardContentsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardContentsCollectionViewCell.swift; sourceTree = "<group>"; };
 		422D416026B42A1A000EB239 /* CalendarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarViewController.swift; sourceTree = "<group>"; };
 		424D1F4026C4E20F009A13F4 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		424D1F4426C4EC23009A13F4 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		426C3E8326577CC100672FF6 /* TimetableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimetableViewController.swift; sourceTree = "<group>"; };
 		427B4B6226AADD3000571EC1 /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
-		42805502268014EC00693A54 /* BoardCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardCollectionViewCell.swift; sourceTree = "<group>"; };
 		42805504268015B400693A54 /* BoardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardViewController.swift; sourceTree = "<group>"; };
 		428341D3268ABD530068C044 /* TimetableCustomView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TimetableCustomView.xib; sourceTree = "<group>"; };
 		428341D5268ABD820068C044 /* TimetableCustomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimetableCustomView.swift; sourceTree = "<group>"; };
@@ -50,7 +53,6 @@
 		42916055264BBE470072A2CF /* sesori.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = sesori.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		42916058264BBE470072A2CF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4291605A264BBE470072A2CF /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		4291605C264BBE470072A2CF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		4291605F264BBE470072A2CF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		42916061264BBE480072A2CF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		42916064264BBE480072A2CF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -58,6 +60,10 @@
 		42A268DF26887D0C009A5BCC /* LunchCustomView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LunchCustomView.xib; sourceTree = "<group>"; };
 		42A268E126887D55009A5BCC /* LunchCustomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LunchCustomView.swift; sourceTree = "<group>"; };
 		42AD5CBE2703DFCE00DD2250 /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
+		42B565FC271F8D59003AF931 /* BoardTabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardTabViewController.swift; sourceTree = "<group>"; };
+		42B565FE271F902F003AF931 /* BoardTab1ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardTab1ViewController.swift; sourceTree = "<group>"; };
+		42B56600271F903D003AF931 /* BoardTab2ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardTab2ViewController.swift; sourceTree = "<group>"; };
+		42B56602271F9048003AF931 /* BoardTab3ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardTab3ViewController.swift; sourceTree = "<group>"; };
 		42BA62EE26EE09BB00A883A1 /* CalendarCustomView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CalendarCustomView.xib; sourceTree = "<group>"; };
 		42BA62F026EE09EF00A883A1 /* CalendarCustomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarCustomView.swift; sourceTree = "<group>"; };
 		42BA62F226F70C8C00A883A1 /* ReaderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReaderViewController.swift; sourceTree = "<group>"; };
@@ -109,7 +115,6 @@
 				42916066264BBE480072A2CF /* Info.plist */,
 				42916058264BBE470072A2CF /* AppDelegate.swift */,
 				4291605A264BBE470072A2CF /* SceneDelegate.swift */,
-				4291605C264BBE470072A2CF /* ViewController.swift */,
 				4291605E264BBE470072A2CF /* Main.storyboard */,
 				42916063264BBE480072A2CF /* LaunchScreen.storyboard */,
 				424D1F4026C4E20F009A13F4 /* LoginViewController.swift */,
@@ -158,7 +163,11 @@
 		42E8D3232709826A00D11476 /* Board */ = {
 			isa = PBXGroup;
 			children = (
-				42805502268014EC00693A54 /* BoardCollectionViewCell.swift */,
+				420AFE6A2712C41D00F031D7 /* BoardContentsCollectionViewCell.swift */,
+				42B565FC271F8D59003AF931 /* BoardTabViewController.swift */,
+				42B565FE271F902F003AF931 /* BoardTab1ViewController.swift */,
+				42B56600271F903D003AF931 /* BoardTab2ViewController.swift */,
+				42B56602271F9048003AF931 /* BoardTab3ViewController.swift */,
 			);
 			path = Board;
 			sourceTree = "<group>";
@@ -305,18 +314,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4291605D264BBE470072A2CF /* ViewController.swift in Sources */,
 				428CB0552654268E002CAFE9 /* LunchViewController.swift in Sources */,
-				42805503268014EC00693A54 /* BoardCollectionViewCell.swift in Sources */,
 				424D1F4126C4E20F009A13F4 /* LoginViewController.swift in Sources */,
 				427B4B6326AADD3000571EC1 /* SettingViewController.swift in Sources */,
 				42A268E226887D55009A5BCC /* LunchCustomView.swift in Sources */,
 				42BA62F326F70C8C00A883A1 /* ReaderViewController.swift in Sources */,
+				42B56603271F9048003AF931 /* BoardTab3ViewController.swift in Sources */,
 				42AD5CBF2703DFCE00DD2250 /* TabBarViewController.swift in Sources */,
 				42916059264BBE470072A2CF /* AppDelegate.swift in Sources */,
+				42B565FF271F902F003AF931 /* BoardTab1ViewController.swift in Sources */,
 				428CB053265425AD002CAFE9 /* FirstItemViewController.swift in Sources */,
 				426C3E8426577CC100672FF6 /* TimetableViewController.swift in Sources */,
 				4291605B264BBE470072A2CF /* SceneDelegate.swift in Sources */,
+				420AFE6B2712C41D00F031D7 /* BoardContentsCollectionViewCell.swift in Sources */,
+				42B56601271F903D003AF931 /* BoardTab2ViewController.swift in Sources */,
 				428341D6268ABD820068C044 /* TimetableCustomView.swift in Sources */,
 				42BA62F126EE09EF00A883A1 /* CalendarCustomView.swift in Sources */,
 				42E8D32027097F4D00D11476 /* MyPageViewController.swift in Sources */,
@@ -324,6 +335,7 @@
 				422D416126B42A1A000EB239 /* CalendarViewController.swift in Sources */,
 				42E8D326270D0BF600D11476 /* TimetableCollectionViewCell.swift in Sources */,
 				42805505268015B400693A54 /* BoardViewController.swift in Sources */,
+				42B565FD271F8D59003AF931 /* BoardTabViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

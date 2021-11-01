@@ -6,9 +6,7 @@ target 'sesori' do
   use_frameworks!
 
   # Pods for sesori
-  pod 'KakaoSDKCommon'
-  pod 'KakaoSDKAuth'
-  pod 'KakaoSDKUser'
   pod 'Alamofire'
   pod 'SwiftyJSON'
+  pod 'Tabman', '~> 2.11'
 end

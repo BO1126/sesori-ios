@@ -1,40 +1,28 @@
 PODS:
   - Alamofire (5.4.3)
-  - KakaoSDKAuth (2.5.2):
-    - KakaoSDKCommon (= 2.5.2)
-  - KakaoSDKCommon (2.5.2):
-    - KakaoSDKCommon/Common (= 2.5.2)
-    - KakaoSDKCommon/Network (= 2.5.2)
-  - KakaoSDKCommon/Common (2.5.2)
-  - KakaoSDKCommon/Network (2.5.2):
-    - Alamofire (~> 5.1)
-    - KakaoSDKCommon/Common (= 2.5.2)
-  - KakaoSDKUser (2.5.2):
-    - KakaoSDKAuth (= 2.5.2)
+  - Pageboy (3.6.2)
   - SwiftyJSON (5.0.1)
+  - Tabman (2.11.1):
+    - Pageboy (~> 3.6.0)
 
 DEPENDENCIES:
   - Alamofire
-  - KakaoSDKAuth
-  - KakaoSDKCommon
-  - KakaoSDKUser
   - SwiftyJSON
+  - Tabman (~> 2.11)
 
 SPEC REPOS:
   trunk:
     - Alamofire
-    - KakaoSDKAuth
-    - KakaoSDKCommon
-    - KakaoSDKUser
+    - Pageboy
     - SwiftyJSON
+    - Tabman
 
 SPEC CHECKSUMS:
   Alamofire: e447a2774a40c996748296fa2c55112fdbbc42f9
-  KakaoSDKAuth: 81715662c03e4c8c1a140f293e9fd6fd68b2e9dd
-  KakaoSDKCommon: 887e22f7aa4647bd0a7d1397512fc5f6211b83d6
-  KakaoSDKUser: b79c1a18da69681de7c9d3fa59e83c37b711ce7e
+  Pageboy: cf121b9dd48c63f3f281b2a9ec93d02e0f23879b
   SwiftyJSON: 2f33a42c6fbc52764d96f13368585094bfd8aa5e
+  Tabman: 792ac76fd1ec95af175c93db880a3c47cabedc91
 
-PODFILE CHECKSUM: e9c6f4c93c434ef131f8c916f43ca30815b5b49c
+PODFILE CHECKSUM: 040ea7423adeeeca35aed5931c61633368e57f7b
 
 COCOAPODS: 1.10.1
