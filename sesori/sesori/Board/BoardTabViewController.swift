@@ -17,6 +17,7 @@ class BoardTabViewController: TabmanViewController {
 
         override func viewDidLoad() {
             super.viewDidLoad()
+            
 
             let vc1 = UIStoryboard.init(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "vc1") as! BoardTab1ViewController
             
@@ -44,7 +45,7 @@ class BoardTabViewController: TabmanViewController {
                 button.selectedTintColor = UIColor(red: 104/255, green: 180/255, blue: 1, alpha: 1)
             }
             
-            bar.backgroundView.style = .clear
+//            bar.backgroundView.style = .clear
             bar.layout.alignment = .centerDistributed
         }
     

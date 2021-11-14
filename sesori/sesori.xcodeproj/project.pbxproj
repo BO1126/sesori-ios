@@ -33,6 +33,7 @@
 		42BA62EF26EE09BB00A883A1 /* CalendarCustomView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 42BA62EE26EE09BB00A883A1 /* CalendarCustomView.xib */; };
 		42BA62F126EE09EF00A883A1 /* CalendarCustomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42BA62F026EE09EF00A883A1 /* CalendarCustomView.swift */; };
 		42BA62F326F70C8C00A883A1 /* ReaderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42BA62F226F70C8C00A883A1 /* ReaderViewController.swift */; };
+		42C9FC52274105F700082C6C /* TemporaryLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42C9FC51274105F700082C6C /* TemporaryLoginViewController.swift */; };
 		42E8D32027097F4D00D11476 /* MyPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42E8D31F27097F4D00D11476 /* MyPageViewController.swift */; };
 		42E8D326270D0BF600D11476 /* TimetableCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42E8D325270D0BF600D11476 /* TimetableCollectionViewCell.swift */; };
 		8619B80121CB1935D322CD20 /* Pods_sesori.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9912C9BAFB20E5A7FBDF82AE /* Pods_sesori.framework */; };
@@ -67,6 +68,7 @@
 		42BA62EE26EE09BB00A883A1 /* CalendarCustomView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CalendarCustomView.xib; sourceTree = "<group>"; };
 		42BA62F026EE09EF00A883A1 /* CalendarCustomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarCustomView.swift; sourceTree = "<group>"; };
 		42BA62F226F70C8C00A883A1 /* ReaderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReaderViewController.swift; sourceTree = "<group>"; };
+		42C9FC51274105F700082C6C /* TemporaryLoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemporaryLoginViewController.swift; sourceTree = "<group>"; };
 		42E8D31F27097F4D00D11476 /* MyPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageViewController.swift; sourceTree = "<group>"; };
 		42E8D325270D0BF600D11476 /* TimetableCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimetableCollectionViewCell.swift; sourceTree = "<group>"; };
 		9912C9BAFB20E5A7FBDF82AE /* Pods_sesori.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_sesori.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -122,6 +124,7 @@
 				42BA62F226F70C8C00A883A1 /* ReaderViewController.swift */,
 				42AD5CBE2703DFCE00DD2250 /* TabBarViewController.swift */,
 				42BA62ED26EE095600A883A1 /* CustomView */,
+				42C9FC51274105F700082C6C /* TemporaryLoginViewController.swift */,
 			);
 			path = sesori;
 			sourceTree = "<group>";
@@ -329,6 +332,7 @@
 				420AFE6B2712C41D00F031D7 /* BoardContentsCollectionViewCell.swift in Sources */,
 				42B56601271F903D003AF931 /* BoardTab2ViewController.swift in Sources */,
 				428341D6268ABD820068C044 /* TimetableCustomView.swift in Sources */,
+				42C9FC52274105F700082C6C /* TemporaryLoginViewController.swift in Sources */,
 				42BA62F126EE09EF00A883A1 /* CalendarCustomView.swift in Sources */,
 				42E8D32027097F4D00D11476 /* MyPageViewController.swift in Sources */,
 				424D1F4526C4EC23009A13F4 /* RegisterViewController.swift in Sources */,
