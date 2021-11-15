@@ -36,6 +36,7 @@ class TemporaryLoginViewController: UIViewController {
     func Login(){
         let view = self.storyboard?.instantiateViewController(withIdentifier: "mainVC")
         view?.modalTransitionStyle = UIModalTransitionStyle.coverVertical
+        view?.modalPresentationStyle = .fullScreen
         self.present(view!, animated: true, completion: nil)
         UserDefaults.standard.set(self.studentNumberTextField.text, forKey: "studentNumber")
     }

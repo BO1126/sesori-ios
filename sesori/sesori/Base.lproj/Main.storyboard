@@ -587,7 +587,7 @@
                                 </constraints>
                             </view>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" name="Lightgray"/>
                         <constraints>
                             <constraint firstItem="aws-r7-U8y" firstAttribute="top" secondItem="i0X-KR-aj3" secondAttribute="bottom" constant="49" id="3PM-g5-JIm"/>
                             <constraint firstAttribute="trailing" secondItem="i0X-KR-aj3" secondAttribute="trailing" id="Bo1-5t-s8n"/>
@@ -1257,8 +1257,8 @@
     <resources>
         <image name="_b" width="72" height="68"/>
         <image name="_bb" width="71" height="68"/>
-        <image name="arrow.left" catalog="system" width="128" height="98"/>
         <image name="arrow.left" width="512" height="512"/>
+        <image name="arrow.left" catalog="system" width="128" height="98"/>
         <image name="arrow.right" width="512" height="512"/>
         <image name="camera" width="512" height="512"/>
         <image name="home" width="87" height="71"/>
