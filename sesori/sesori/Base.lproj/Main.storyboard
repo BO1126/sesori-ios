@@ -893,6 +893,27 @@
                                             <segue destination="rlk-AF-ckg" kind="presentation" modalPresentationStyle="fullScreen" id="iJr-9u-QYX"/>
                                         </connections>
                                     </button>
+                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="r9v-tp-HoN">
+                                        <rect key="frame" x="87" y="248" width="240" height="222"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="학번" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gb0-FQ-mgr">
+                                                <rect key="frame" x="27" y="33" width="30" height="21"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Aef-vR-flh">
+                                                <rect key="frame" x="27" y="62" width="42" height="21"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                    </view>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
@@ -1050,11 +1071,21 @@
                                             <constraint firstAttribute="height" constant="150" id="RrK-RX-Zax"/>
                                         </constraints>
                                     </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1gx-73-yQU" customClass="NewsCustomView" customModule="sesori" customModuleProvider="target">
+                                        <rect key="frame" x="224" y="570" width="150" height="150"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="150" id="NmK-5H-voO"/>
+                                            <constraint firstAttribute="width" constant="150" id="fnF-C1-XZH"/>
+                                        </constraints>
+                                    </view>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
+                                    <constraint firstItem="1gx-73-yQU" firstAttribute="top" secondItem="BZe-oy-Pbn" secondAttribute="bottom" constant="70" id="0ZG-sU-b2N"/>
                                     <constraint firstItem="Sbg-2L-X8B" firstAttribute="top" secondItem="PIi-sy-qwV" secondAttribute="bottom" constant="30" id="193-Ve-eNX"/>
                                     <constraint firstAttribute="trailing" secondItem="BZe-oy-Pbn" secondAttribute="trailing" constant="40" id="5Xb-FN-khX"/>
+                                    <constraint firstAttribute="trailing" secondItem="1gx-73-yQU" secondAttribute="trailing" constant="40" id="9Lv-0W-SqY"/>
                                     <constraint firstItem="Sbg-2L-X8B" firstAttribute="leading" secondItem="gNl-4a-z2L" secondAttribute="leading" constant="40" id="RqQ-Br-gR9"/>
                                     <constraint firstItem="PIi-sy-qwV" firstAttribute="top" secondItem="gNl-4a-z2L" secondAttribute="top" id="WVO-JB-ix6"/>
                                     <constraint firstItem="PIi-sy-qwV" firstAttribute="leading" secondItem="gNl-4a-z2L" secondAttribute="leading" id="WuR-ed-7ze"/>
@@ -1257,8 +1288,8 @@
     <resources>
         <image name="_b" width="72" height="68"/>
         <image name="_bb" width="71" height="68"/>
-        <image name="arrow.left" width="512" height="512"/>
         <image name="arrow.left" catalog="system" width="128" height="98"/>
+        <image name="arrow.left" width="512" height="512"/>
         <image name="arrow.right" width="512" height="512"/>
         <image name="camera" width="512" height="512"/>
         <image name="home" width="87" height="71"/>

@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		420AFE6B2712C41D00F031D7 /* BoardContentsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 420AFE6A2712C41D00F031D7 /* BoardContentsCollectionViewCell.swift */; };
+		4214C8A32743749E005F3E3D /* NewsCustomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4214C8A22743749E005F3E3D /* NewsCustomView.swift */; };
+		4214C8A5274374B6005F3E3D /* NewsCustomView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4214C8A4274374B6005F3E3D /* NewsCustomView.xib */; };
 		422D416126B42A1A000EB239 /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 422D416026B42A1A000EB239 /* CalendarViewController.swift */; };
 		424D1F4126C4E20F009A13F4 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 424D1F4026C4E20F009A13F4 /* LoginViewController.swift */; };
 		424D1F4526C4EC23009A13F4 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 424D1F4426C4EC23009A13F4 /* RegisterViewController.swift */; };
@@ -41,6 +43,8 @@
 
 /* Begin PBXFileReference section */
 		420AFE6A2712C41D00F031D7 /* BoardContentsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardContentsCollectionViewCell.swift; sourceTree = "<group>"; };
+		4214C8A22743749E005F3E3D /* NewsCustomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsCustomView.swift; sourceTree = "<group>"; };
+		4214C8A4274374B6005F3E3D /* NewsCustomView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NewsCustomView.xib; sourceTree = "<group>"; };
 		422D416026B42A1A000EB239 /* CalendarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarViewController.swift; sourceTree = "<group>"; };
 		424D1F4026C4E20F009A13F4 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		424D1F4426C4EC23009A13F4 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
@@ -114,6 +118,7 @@
 				42E8D3222709811800D11476 /* Home */,
 				42E8D3232709826A00D11476 /* Board */,
 				42E8D3242709828100D11476 /* MyPage */,
+				42BA62ED26EE095600A883A1 /* CustomView */,
 				42916066264BBE480072A2CF /* Info.plist */,
 				42916058264BBE470072A2CF /* AppDelegate.swift */,
 				4291605A264BBE470072A2CF /* SceneDelegate.swift */,
@@ -123,7 +128,6 @@
 				424D1F4426C4EC23009A13F4 /* RegisterViewController.swift */,
 				42BA62F226F70C8C00A883A1 /* ReaderViewController.swift */,
 				42AD5CBE2703DFCE00DD2250 /* TabBarViewController.swift */,
-				42BA62ED26EE095600A883A1 /* CustomView */,
 				42C9FC51274105F700082C6C /* TemporaryLoginViewController.swift */,
 			);
 			path = sesori;
@@ -138,6 +142,8 @@
 				428341D5268ABD820068C044 /* TimetableCustomView.swift */,
 				42BA62EE26EE09BB00A883A1 /* CalendarCustomView.xib */,
 				42BA62F026EE09EF00A883A1 /* CalendarCustomView.swift */,
+				4214C8A4274374B6005F3E3D /* NewsCustomView.xib */,
+				4214C8A22743749E005F3E3D /* NewsCustomView.swift */,
 			);
 			path = CustomView;
 			sourceTree = "<group>";
@@ -259,6 +265,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4214C8A5274374B6005F3E3D /* NewsCustomView.xib in Resources */,
 				42916065264BBE480072A2CF /* LaunchScreen.storyboard in Resources */,
 				42BA62EF26EE09BB00A883A1 /* CalendarCustomView.xib in Resources */,
 				428341D4268ABD530068C044 /* TimetableCustomView.xib in Resources */,
@@ -327,6 +334,7 @@
 				42916059264BBE470072A2CF /* AppDelegate.swift in Sources */,
 				42B565FF271F902F003AF931 /* BoardTab1ViewController.swift in Sources */,
 				428CB053265425AD002CAFE9 /* FirstItemViewController.swift in Sources */,
+				4214C8A32743749E005F3E3D /* NewsCustomView.swift in Sources */,
 				426C3E8426577CC100672FF6 /* TimetableViewController.swift in Sources */,
 				4291605B264BBE470072A2CF /* SceneDelegate.swift in Sources */,
 				420AFE6B2712C41D00F031D7 /* BoardContentsCollectionViewCell.swift in Sources */,
