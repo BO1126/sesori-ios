@@ -34,5 +34,13 @@ class MyPageViewController: UIViewController {
         }
     }
     
+    @IBAction func showPopup(_ sender: Any) {
+        let storyBoard = UIStoryboard.init(name: "Main", bundle: nil)
+        let popupVC = storyBoard.instantiateViewController(withIdentifier: "StudentNumberAlterVC")
+        popupVC.modalPresentationStyle = .overCurrentContext
+        popupVC.modalTransitionStyle = .crossDissolve
+        present(popupVC, animated: true, completion: nil)
+      }
+    
 
 }

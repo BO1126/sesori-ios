@@ -14,8 +14,7 @@ class FirstItemViewController : UIViewController {
     @IBOutlet weak var studentLabel : UILabel!
     @IBOutlet weak var calendarView : UIView!
     @IBOutlet weak var mainView : UIView!
-    
-    let userData : Array<Any> = ["이정우",6,20]
+    @IBOutlet weak var todayDateLabel : UILabel!
     
     override func viewDidLoad() {
         studentView?.layer.cornerRadius = 40
@@ -33,8 +32,12 @@ class FirstItemViewController : UIViewController {
         mainView.layer.cornerRadius = 50
         mainView.layer.masksToBounds = true
         mainView.layer.maskedCorners = [.layerMinXMaxYCorner, .layerMaxXMaxYCorner]
-//        studentLabel.text = "\(userData[0]) 학생,"
-
+        
+        let todayDate = Date()
+        let formatter = DateFormatter()
+        formatter.dateFormat = "yyyy년 M월 d일"
+        todayDateLabel.text = formatter.string(from: todayDate)
+        
     }
     
     @objc func showLunchPage(sender:UIGestureRecognizer){
