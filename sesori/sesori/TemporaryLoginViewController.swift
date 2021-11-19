@@ -15,11 +15,13 @@ class TemporaryLoginViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        if let _ = UserDefaults.standard.string(forKey: "StudentNumber"){
-            let view = self.storyboard?.instantiateViewController(withIdentifier: "mainVC")
-            view?.modalTransitionStyle = .crossDissolve
-            view?.modalPresentationStyle = .fullScreen
-            self.present(view!, animated: true, completion: nil)
+        if let _ = UserDefaults.standard.string(forKey: "studentNumber"){
+            DispatchQueue.main.async {
+                let view = self.storyboard?.instantiateViewController(withIdentifier: "mainVC")
+                view?.modalTransitionStyle = .crossDissolve
+                view?.modalPresentationStyle = .fullScreen
+                self.present(view!, animated: true, completion: nil)
+            }
         }
         // Do any additional setup after loading the view.
     }

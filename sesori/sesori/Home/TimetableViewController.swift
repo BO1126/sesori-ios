@@ -13,7 +13,6 @@ class TimetableViewController : UIViewController, UICollectionViewDataSource, UI
     
     let todayDate = Date()
     let formatter = DateFormatter()
-    let userData = ["Grade":"3","Class":"6","Number":"20"]
     
     var timelist = [String]()
     var thisMondayDate = String()
@@ -25,6 +24,8 @@ class TimetableViewController : UIViewController, UICollectionViewDataSource, UI
     @IBOutlet weak var collectionview : UICollectionView!
     
     override func viewDidLoad() {
+        self.view.addSubview(self.activityIndicator)
+        activityIndicator.startAnimating()
         let flowlayout : UICollectionViewFlowLayout = UICollectionViewFlowLayout()
         
         flowlayout.scrollDirection = .horizontal
@@ -40,7 +41,6 @@ class TimetableViewController : UIViewController, UICollectionViewDataSource, UI
         
         self.collectionview.collectionViewLayout = flowlayout
         
-        
         makeThisWeek()
         setTimetableData()
         self.collectionview.delegate = self
@@ -49,7 +49,8 @@ class TimetableViewController : UIViewController, UICollectionViewDataSource, UI
     
     
     func setTimetableData(){
-        let url = "https://open.neis.go.kr/hub/hisTimetable?Type=json&pIndex=1&pSize=100&ATPT_OFCDC_SC_CODE=B10&SD_SCHUL_CODE=7010537&KEY=406a6783d8db4d5483fd44abf25d720f&GRADE=3&CLASS_NM=6&TI_FROM_YMD="+self.thisMondayDate+"&TI_TO_YMD="+self.thisFridayDate
+        let studentNumber = UserDefaults.standard.string(forKey: "studentNumber")!
+        let url = "https://open.neis.go.kr/hub/hisTimetable?Type=json&pIndex=1&pSize=100&ATPT_OFCDC_SC_CODE=B10&SD_SCHUL_CODE=7010537&KEY=406a6783d8db4d5483fd44abf25d720f&GRADE="+String(Array(studentNumber)[0])+"&CLASS_NM="+String(Array(studentNumber)[2])+"&TI_FROM_YMD="+self.thisMondayDate+"&TI_TO_YMD="+self.thisFridayDate
         
         AF.request(url,
                    method: .get).responseJSON{
@@ -65,6 +66,7 @@ class TimetableViewController : UIViewController, UICollectionViewDataSource, UI
                         }
                     }
                     self.collectionview.reloadData()
+                    self.activityIndicator.stopAnimating()
             }
     }
     
@@ -130,5 +132,15 @@ class TimetableViewController : UIViewController, UICollectionViewDataSource, UI
     @IBAction func dismissView(){
         dismiss(animated: true)
     }
+    
+    lazy var activityIndicator: UIActivityIndicatorView = {
+        let activityIndicator = UIActivityIndicatorView()
+        activityIndicator.frame = CGRect(x: 0, y: 0, width: 50, height: 50)
+        activityIndicator.center = self.view.center
+        activityIndicator.color = UIColor.black
+        activityIndicator.hidesWhenStopped = true
+        activityIndicator.style = UIActivityIndicatorView.Style.medium
+        activityIndicator.stopAnimating()
+        return activityIndicator }()
     
 }
