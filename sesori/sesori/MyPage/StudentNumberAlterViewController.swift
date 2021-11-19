@@ -9,8 +9,9 @@ import UIKit
 
 class StudentNumberAlterViewController: UIViewController {
     
-    @IBOutlet weak var popupView : UIView!
+    @IBOutlet weak var popupView : UIVisualEffectView!
     @IBOutlet weak var studentNumberTextField : UITextField!
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,11 +27,14 @@ class StudentNumberAlterViewController: UIViewController {
     }
     
     @IBAction func touchSubmitButton(){
-        let pattern = "^[0-9]{5,5}$"
+        let pattern = "^[1-3]{1,1}0[1-9]{1,1}[0-9]{2,2}$"
         let regex = try? NSRegularExpression(pattern: pattern)
         if let _ = regex?.firstMatch(in: studentNumberTextField.text!, options: [], range: NSRange(location: 0, length: studentNumberTextField.text!.count)) {
             UserDefaults.standard.set(studentNumberTextField.text, forKey: "studentNumber")
-            dismiss(animated: true, completion: nil)
+            UIApplication.shared.perform(#selector(NSXPCConnection.suspend))
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+                exit(0)
+            }
         }else{
             shakeTextField(textField: studentNumberTextField)
         }

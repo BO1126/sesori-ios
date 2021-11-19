@@ -15,7 +15,12 @@ class TemporaryLoginViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        if let _ = UserDefaults.standard.string(forKey: "StudentNumber"){
+            let view = self.storyboard?.instantiateViewController(withIdentifier: "mainVC")
+            view?.modalTransitionStyle = .crossDissolve
+            view?.modalPresentationStyle = .fullScreen
+            self.present(view!, animated: true, completion: nil)
+        }
         // Do any additional setup after loading the view.
     }
     
@@ -24,7 +29,7 @@ class TemporaryLoginViewController: UIViewController {
             loginFailedLabel.text = "학번을 입력해주세요"
             return
         }
-        let pattern = "^[0-9]{5,5}$"
+        let pattern = "^[1-3]{1,1}0[1-9]{1,1}[0-9]{2,2}$"
         let regex = try? NSRegularExpression(pattern: pattern)
         if let _ = regex?.firstMatch(in: studentNumberTextField.text!, options: [], range: NSRange(location: 0, length: studentNumberTextField.text!.count)) {
             Login()
@@ -35,7 +40,7 @@ class TemporaryLoginViewController: UIViewController {
     
     func Login(){
         let view = self.storyboard?.instantiateViewController(withIdentifier: "mainVC")
-        view?.modalTransitionStyle = UIModalTransitionStyle.coverVertical
+        view?.modalTransitionStyle = .crossDissolve
         view?.modalPresentationStyle = .fullScreen
         self.present(view!, animated: true, completion: nil)
         UserDefaults.standard.set(self.studentNumberTextField.text, forKey: "studentNumber")
