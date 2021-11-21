@@ -17,10 +17,12 @@ class TemporaryLoginViewController: UIViewController {
         super.viewDidLoad()
         if let _ = UserDefaults.standard.string(forKey: "studentNumber"){
             DispatchQueue.main.async {
-                let view = self.storyboard?.instantiateViewController(withIdentifier: "mainVC")
-                view?.modalTransitionStyle = .crossDissolve
-                view?.modalPresentationStyle = .fullScreen
-                self.present(view!, animated: true, completion: nil)
+                let storyBoard = UIStoryboard.init(name: "Main", bundle: nil)
+                let popupVC = storyBoard.instantiateViewController(withIdentifier: "TemporaryLoginWaitVC")
+                popupVC.modalPresentationStyle = .overCurrentContext
+                popupVC.modalTransitionStyle = .crossDissolve
+                self.present(popupVC, animated: true, completion: nil)
+                
             }
         }
         // Do any additional setup after loading the view.
@@ -42,7 +44,7 @@ class TemporaryLoginViewController: UIViewController {
     
     func Login(){
         let view = self.storyboard?.instantiateViewController(withIdentifier: "mainVC")
-        view?.modalTransitionStyle = .crossDissolve
+        view?.modalTransitionStyle = .coverVertical
         view?.modalPresentationStyle = .fullScreen
         self.present(view!, animated: true, completion: nil)
         UserDefaults.standard.set(self.studentNumberTextField.text, forKey: "studentNumber")

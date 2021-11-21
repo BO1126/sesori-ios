@@ -110,6 +110,24 @@
             </objects>
             <point key="canvasLocation" x="-810" y="86"/>
         </scene>
+        <!--Temporary Login Wait View Controller-->
+        <scene sceneID="w7B-Ni-qxJ">
+            <objects>
+                <viewController storyboardIdentifier="TemporaryLoginWaitVC" id="Met-Cf-ze2" customClass="TemporaryLoginWaitViewController" customModule="sesori" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="3ey-6q-MBp"/>
+                        <viewControllerLayoutGuide type="bottom" id="kXg-ZZ-H9x"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="eCY-ER-tys">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.34967404801324503" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GAN-yE-4Ow" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="54" y="-582"/>
+        </scene>
         <!--Login View Controller-->
         <scene sceneID="48z-Qa-gOI">
             <objects>

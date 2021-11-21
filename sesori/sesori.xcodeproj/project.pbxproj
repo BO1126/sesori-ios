@@ -11,6 +11,7 @@
 		4214C8A32743749E005F3E3D /* NewsCustomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4214C8A22743749E005F3E3D /* NewsCustomView.swift */; };
 		4214C8A5274374B6005F3E3D /* NewsCustomView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4214C8A4274374B6005F3E3D /* NewsCustomView.xib */; };
 		4214C8A727460F0D005F3E3D /* StudentNumberAlterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4214C8A627460F0D005F3E3D /* StudentNumberAlterViewController.swift */; };
+		4214C8A92748FEBE005F3E3D /* TemporaryLoginWaitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4214C8A82748FEBE005F3E3D /* TemporaryLoginWaitViewController.swift */; };
 		422D416126B42A1A000EB239 /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 422D416026B42A1A000EB239 /* CalendarViewController.swift */; };
 		424D1F4126C4E20F009A13F4 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 424D1F4026C4E20F009A13F4 /* LoginViewController.swift */; };
 		424D1F4526C4EC23009A13F4 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 424D1F4426C4EC23009A13F4 /* RegisterViewController.swift */; };
@@ -47,6 +48,7 @@
 		4214C8A22743749E005F3E3D /* NewsCustomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsCustomView.swift; sourceTree = "<group>"; };
 		4214C8A4274374B6005F3E3D /* NewsCustomView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NewsCustomView.xib; sourceTree = "<group>"; };
 		4214C8A627460F0D005F3E3D /* StudentNumberAlterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentNumberAlterViewController.swift; sourceTree = "<group>"; };
+		4214C8A82748FEBE005F3E3D /* TemporaryLoginWaitViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemporaryLoginWaitViewController.swift; sourceTree = "<group>"; };
 		422D416026B42A1A000EB239 /* CalendarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarViewController.swift; sourceTree = "<group>"; };
 		424D1F4026C4E20F009A13F4 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		424D1F4426C4EC23009A13F4 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
@@ -131,6 +133,7 @@
 				42BA62F226F70C8C00A883A1 /* ReaderViewController.swift */,
 				42AD5CBE2703DFCE00DD2250 /* TabBarViewController.swift */,
 				42C9FC51274105F700082C6C /* TemporaryLoginViewController.swift */,
+				4214C8A82748FEBE005F3E3D /* TemporaryLoginWaitViewController.swift */,
 			);
 			path = sesori;
 			sourceTree = "<group>";
@@ -350,6 +353,7 @@
 				424D1F4526C4EC23009A13F4 /* RegisterViewController.swift in Sources */,
 				422D416126B42A1A000EB239 /* CalendarViewController.swift in Sources */,
 				42E8D326270D0BF600D11476 /* TimetableCollectionViewCell.swift in Sources */,
+				4214C8A92748FEBE005F3E3D /* TemporaryLoginWaitViewController.swift in Sources */,
 				42805505268015B400693A54 /* BoardViewController.swift in Sources */,
 				42B565FD271F8D59003AF931 /* BoardTabViewController.swift in Sources */,
 			);
