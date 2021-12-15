@@ -42,5 +42,8 @@ class MyPageViewController: UIViewController {
         present(popupVC, animated: true, completion: nil)
       }
     
-
+    @IBAction func touchLogoutButton(){
+        UserDefaults.standard.removeObject(forKey: "name")
+        UserDefaults.standard.removeObject(forKey: "studentNumber")
+    }
 }

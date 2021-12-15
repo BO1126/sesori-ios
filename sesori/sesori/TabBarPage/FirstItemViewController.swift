@@ -38,6 +38,8 @@ class FirstItemViewController : UIViewController {
         formatter.dateFormat = "yyyy년 M월 d일"
         todayDateLabel.text = formatter.string(from: todayDate)
         
+        studentLabel.text = "\(UserDefaults.standard.string(forKey: "name")!) 학생"
+        
     }
     
     @objc func showLunchPage(sender:UIGestureRecognizer){
